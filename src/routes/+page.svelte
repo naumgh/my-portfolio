@@ -15,24 +15,21 @@ name can now be set from ouside the component, by a parent component
 
 <script>
     export let name = "Naum Hoffman";
-    export let jobTitle = "Software Engineer";
+    export let jobTitle = "Software Engineer / Data Analyst";
     import Navbar from "$lib/components/Navbar.svelte";
 </script>
 
 <Navbar />
 
 <main class="flex flex-col items-center justify-center min-h-screen bg-background text-primary font-sans">
-    
-    <!-- Image Section -->
+
     <img src="/me2.jpg" alt="Naum Hoffman" class="w-36 h-36 rounded-full border-2 border-accent shadow-lg mb-6">
 
-    <!-- Heading Section -->
     <h1 class="text-6xl font-bold mb-2">{name}</h1>
     <p class="text-xl text-secondary mb-6">{jobTitle}</p>
 
     
 
-    <!-- Call to Action Button -->
     <a href="/projects" 
        class="px-8 py-3 bg-accent hover:bg-green-500 rounded-lg text-surface font-semibold transition duration-300">
         See My Work

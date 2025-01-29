@@ -1,5 +1,6 @@
 import containerQueries from '@tailwindcss/container-queries';
 import typography from '@tailwindcss/typography';
+import scrollbar from 'tailwind-scrollbar';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -19,7 +20,7 @@ const config: Config = {
       }
     }
   },
-  plugins: [containerQueries, typography]
+  plugins: [containerQueries, typography, scrollbar]
 };
 
 export default config;

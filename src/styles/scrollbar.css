@@ -1,0 +1,18 @@
+html {
+	scrollbar-width: thin; /* Firefox */
+	scrollbar-color: #555555 #1a1a1a; /* Thumb and track colors */
+}
+
+html::-webkit-scrollbar {
+	width: 10px; /* Adjust width to match the image */
+	height: 10px; /* For horizontal scrollbar, if needed */
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: #555555; /* Slightly lighter gray thumb */
+	border-radius: 5px; /* Rounded corners */
+}
+
+html::-webkit-scrollbar-track {
+	background-color: #1a1a1a; /* Darker track */
+}

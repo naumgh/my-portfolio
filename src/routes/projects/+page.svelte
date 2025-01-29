@@ -1,167 +1,129 @@
 <script lang="ts">
     //@ts-ignore
     import Navbar from "../../lib/components/Navbar.svelte";
+    import Footer from "../../lib/components/Footer.svelte";
     import { Octokit } from "octokit";
     import { onMount } from 'svelte';
+    import ProjectCard from '../../lib/components/ProjectCard.svelte';
+    import ProjectHeader from '../../lib/components/ProjectHeader.svelte';
+
+    //we scrapped the github repo stuff
     
-    interface Repo {
-        id: number;
-        name: string;
-        html_url: string;
-        description: string | null;
-        stargazers_count: number;
-        forks_count: number;
-    }
-    
-    interface File {
-        name: string;
-        path: string;
-        type: string; // "file" or "dir"
-        download_url: string | null; // null for directories
-    }
-    
-    let repos: Repo[] = [];
-    let fileLists: Record<string, File[]> = {}; // Store files for each repository by name
-    let openDropdown: string | null = null; // Track the currently open dropdown
-    
-    const octokit = new Octokit({
-        auth: import.meta.env.VITE_GIT_AUTH,
-    });
-    
-    async function fetchRepo() {
-        try {
-            const result = await octokit.request("GET /users/{username}/repos", {
-                username: "naumgh",
-                per_page: 10,
-                sort: "created",
-            });
-    
-            repos = result.data as Repo[];
-        } catch (error) {
-            console.error("Error fetching repositories:", error);
-        }
-    }
-    
-    async function fetchFiles(repoName: string) {
-        if (fileLists[repoName]) return; // Avoid re-fetching if files are already loaded
-    
-        try {
-            const result = await octokit.request("GET /repos/{owner}/{repo}/contents", {
-                owner: "naumgh",
-                repo: repoName,
-            });
-    
-            fileLists[repoName] = result.data as File[];
-        } catch (error) {
-            console.error(`Error fetching files for ${repoName}:`, error);
-            fileLists[repoName] = []; // Set to empty if an error occurs
-        }
-    }
-    
-    function toggleDropdown(repoName: string) {
-        if (openDropdown === repoName) {
-            openDropdown = null; // Close the dropdown if already open
-        } else {
-            openDropdown = repoName; // Open the dropdown
-            fetchFiles(repoName); // Fetch files for the repository
-        }
-    }
-    
-    onMount(() => {
-        fetchRepo();
-    });
-    </script>
+</script>
     
     <Navbar />
     
-    <main class="p-10 bg-background text-primary font-sans min-h-screen">
-        <!-- Header with PostgreSQL Logo -->
-        <div class="flex items-center space-x-4 mb-6">
-            <!-- PostgreSQL Logo -->
-            <img
-                src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
-                alt="PostgreSQL Logo"
-                class="h-12 w-12"
+    <main class="p-6 bg-background text-primary font-sans min-h-screen">
+    <!-- Page Container with Max Width -->
+    <div class="max-w-10xl mx-auto px-6">
+        <!-- Python ML/AI Projects -->
+        
+        <ProjectHeader
+            title="SQL Projects"
+            iconSrc="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+            iconAlt="PostgreSQL Logo"
+            titleColor="#336791"
+        />
+      
+        <!-- Project Cards -->
+        <div class="space-y-6">
+            <ProjectCard
+                title="Database Schema Design Showcase"
+                description="Designed a relational database schema to manage campaigns, donations, volunteers, and expenses. Ensured data integrity using primary and foreign keys, while optimizing queries for efficient data retrieval."
+                highlights={[
+                  "Designed and normalized a relational database schema (3NF).",
+                  "Implemented many-to-many relationships with junction tables.",
+                  "Enforced referential integrity with foreign keys.",
+                  "Created complex queries for data aggregation and retrieval."
+                ]}   
+                codeSnippet={`--Some table Definition Examples
+
+CREATE TABLE CAMPAIGN(
+  CID bigint PRIMARY KEY,
+  Name varchar(33) NOT NULL,
+  campaignBudget real,
+  mission text,
+  startDate DATE,
+  endDate DATE
+);
+
+CREATE TABLE DONATES(
+  CID bigint,
+  DID bigint,
+  total real,
+  PRIMARY KEY (CID, DID),
+  FOREIGN KEY (CID) REFERENCES CAMPAIGN(CID),
+  FOREIGN KEY (DID) REFERENCES DONATOR(DID)
+);
+
+CREATE TABLE VOLUNTEER (
+  VID bigint PRIMARY KEY,
+  Name varchar(33) NOT NULL,
+  Email varchar(55) NOT NULL,
+  tierLevel int,
+  Salary real
+);
+
+-- Sample insertion into some of the tables
+
+-- campaign
+INSERT INTO CAMPAIGN VALUES (100,'green-love',  5000, 'to make trees great again', '2024-03-18', '2024-04-18');
+INSERT INTO CAMPAIGN VALUES (101,'generic-protest', 4000, 'we are just protesting to protest', '2024-02-11', '2024-03-02');
+INSERT INTO CAMPAIGN VALUES (102, 'idk',  2000,'idk im having trouble coming up with mission statements', '2024-01-02', '2024-02-02');
+INSERT INTO CAMPAIGN VALUES (103,'final-countdown',500,'this is the final countdown', '2024-01-02', '2024-02-02');
+INSERT INTO CAMPAIGN VALUES (104,'i-just-want-to-slide',2055,'parties in the sky like its 2055', '2055-01-02', '2055-02-02');
+-- volunteer
+INSERT INTO VOLUNTEER VALUES (927502, 'Clark Davidson', 'clark@gmail.com', 2, 35);
+INSERT INTO VOLUNTEER VALUES (927503, 'Dave Hoffman', 'dave@gmail.com',1,NULL);
+INSERT INTO VOLUNTEER VALUES (927504, 'Ava Huntington', 'ava@gmail.com', 1,  NULL);
+INSERT INTO VOLUNTEER VALUES (927505, 'Clack Clarkson', 'clack@gmail.com',2, NULL);
+INSERT INTO VOLUNTEER VALUES (927506, 'Black White', 'black@gmail.com',1,NULL );
+INSERT INTO VOLUNTEER VALUES (927507, 'Ivan Naskov', 'ots@gmail.com',2, NULL);
+INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL);`}
+                downloadLink="/projects/data-analysis-pandas.py"
+                codeType="sql"
             />
-    
-            <!-- Title -->
-            <h1 class="text-5xl font-bold" style="color: #336791">
-                SQL Projects
-            </h1>
-        </div>
-    
-        <!-- Divider Line -->
-        <hr class="border-t border-gray-500 mb-8" />
-
-        <div class="flex items-center space-x-4 mb-6">
-            <!-- PostgreSQL Logo -->
-            <img
-                src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
-                alt="PostgreSQL Logo"
-                class="h-12 w-12"
+            <ProjectHeader
+            title="Python Projects"
+            iconSrc="https://www.vectorlogo.zone/logos/python/python-icon.svg"
+            iconAlt="Python Logo"
+            titleColor="#306998"
             />
-    
-            <!-- Title -->
-            <h1 class="text-5xl font-bold" style="color: #336791">
-                SQL Projects
-            </h1>
+            <ProjectCard
+                title="Database Interaction and Management System"
+                description="A Python-based interactive application for managing campaign, volunteer, donation, and event data, backed by PostgreSQL. Includes modular design, advanced SQL queries, and intuitive data visualization."
+                highlights={[
+                    "Utilized Psycopg2 for robust PostgreSQL database connections and query execution.",
+        "Designed modular, class-based architecture for maintainability and scalability.",
+        "Implemented dynamic CRUD operations for campaigns, volunteers, and events.",
+        "Created ASCII-based visualizations for financial insights (inflows, outflows, budgets).",
+        "Handled complex SQL queries with Common Table Expressions (CTEs) for data aggregation.",
+        "Incorporated input validation and transaction rollbacks for error handling and data integrity."]}
+                codeSnippet={`# Sample Code: Insert Donations with ON CONFLICT Handling
+  
+def insertIntoDonatesTable(self):
+    tuple_data = (chooseCID, chooseDID, total)
+    campaign_data = [tuple_data]
+    campsql = """
+    INSERT INTO DONATES (CID, DID, total) VALUES (%s, %s, %s)
+    ON CONFLICT (CID, DID) DO UPDATE
+    SET total = DONATES.total + EXCLUDED.total
+    """
+    try:
+        cursors['cursor6'].executemany(campsql, campaign_data)
+        dbconn.commit()
+        print("Inserted successfully")
+    except psycopg2.Error as e:
+        dbconn.rollback()
+        print("Error inserting into DONATES table:", e)`}
+                downloadLink="/projects/python-database-management.py"
+                codeType="python"
+            />
         </div>
-    
-        <!-- Divider Line -->
-        <hr class="border-t border-gray-500 mb-8" />
-   
-    </main>
-
-    
 
 
+       
+        <Footer />
+    </div>
+</main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         
-        <!--
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {#if repos.length > 0}
-                {#each repos as repo (repo.id)}
-                    {#if repo.name !== "naumgh"}
-                        <div class="p-4 bg-surface border border-muted rounded-lg hover:border-accent transition">
-                            Project Card 
-                            <div
-                                class="cursor-pointer"
-                                on:click={() => toggleDropdown(repo.name)}
-                                aria-expanded={openDropdown === repo.name}
-                            >
-                                <h2 class="text-xl font-semibold">{repo.name}</h2>
-                                <p class="text-secondary mb-auto">{repo.description || "No description provided."}</p>
-                            </div>
-    
-                            Dropdown for Files 
-                            <div
-                                class={`mt-4 overflow-hidden transition-[max-height] duration-300 ${
-                                    openDropdown === repo.name ? "max-h-96" : "max-h-0"
-                                }`}
-                            >
-                                <ul class="bg-muted rounded-lg p-4">
-                                    TO DO SECTION 
-                                </ul>
-                            </div>
-                        </div>
-                    {/if}
-                {/each}
-            {:else}
-                <p class="text-secondary">No repositories found or still loading...</p>
-            {/if}
-        </div>
-    -->
