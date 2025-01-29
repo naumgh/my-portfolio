@@ -1,12 +1,17 @@
-import { drizzle } from 'drizzle-orm/better-sqlite3';
-import { createClient } from '@libsql/client';
+import { drizzle } from "drizzle-orm/better-sqlite3";
 //@ts-ignore
-import { env } from '$env/dynamic/private';
-//@ts-ignore
-import Database from 'better-sqlite3';
-//if (!env.DATABASE_URL) throw new Error('DATABASE_URL is not set');
-//const client = createClient({ url: env.DATABASE_URL });
-//export const db = drizzle(client);
+import Database from "better-sqlite3";
+import fs from "fs";
 
-const sqlite = new Database('mydb.sqlite');
+// If running on Vercel, copy the SQLite DB to `/tmp/` (writable directory)
+const dbPath = process.env.VERCEL ? "/tmp/drizzle.sqlite" : "drizzle.sqlite";
+
+if (process.env.VERCEL) {
+  if (!fs.existsSync(dbPath)) {
+    console.log("Copying SQLite database to /tmp/");
+    fs.copyFileSync("drizzle.sqlite", dbPath);
+  }
+}
+
+const sqlite = new Database(dbPath);
 export const db = drizzle(sqlite);
