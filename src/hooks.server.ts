@@ -1,5 +1,6 @@
 import { sequence } from '@sveltejs/kit/hooks';
 import type { Handle } from '@sveltejs/kit';
+//@ts-ignore
 import * as auth from '$lib/server/auth.js';
 
 const handleAuth: Handle = async ({ event, resolve }) => {
