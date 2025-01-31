@@ -56,6 +56,14 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 16V8M8 12l4 4 4-4" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" />
                     </svg>
+
+                    <span
+                         class="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                        Download Now
+                    </span>
+
+
                 </a>
                 <button
                     on:click={openExpandedWindow}

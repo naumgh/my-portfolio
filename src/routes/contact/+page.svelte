@@ -1,12 +1,5 @@
 <script lang="ts">
 
-
-    //let name = "Naum Hoffman";
-    //export let jobTitle = "Software Engineer";
-    //let email = 'naumhoffman2@gmail.com'
-    //let message = '';
-
-
     //@ts-ignore
     import Navbar from "../../lib/components/Navbar.svelte";
 
