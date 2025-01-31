@@ -39,13 +39,24 @@
         <div class="flex items-center justify-between p-2" style="min-width: max-content;">
             <h2 class="text-xs font-bold text-primary">{title}</h2>
             <div class="flex items-center space-x-2">
-                        <a
-                            href={downloadLink}
-                            download
-                            aria-label="Download file"
-                        >
-                        Download it here.
-                    </a>
+                <a
+                    href={downloadLink}
+                    download
+                    class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
+                    aria-label="Download file"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 16V8M8 12l4 4 4-4" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" />
+                    </svg>
+                </a>
                 <button
                     on:click={openExpandedWindow}
                     class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"

@@ -6,6 +6,8 @@ from decimal import Decimal
 from psycopg2 import Date
 import calendar
 
+#git guardian detected this, but i am pretty sure this uvic db does not exist anymore, or password has changed
+#(my professor was very parinoid about passwords, and even muted keystrokes during recording)
 dbconn = psycopg2.connect(host='studentdb.csc.uvic.ca',
         user='c370_s053',
         password='S6BqXNAW')
