@@ -80,7 +80,7 @@ INSERT INTO VOLUNTEER VALUES (927505, 'Clack Clarkson', 'clack@gmail.com',2, NUL
 INSERT INTO VOLUNTEER VALUES (927506, 'Black White', 'black@gmail.com',1,NULL );
 INSERT INTO VOLUNTEER VALUES (927507, 'Ivan Naskov', 'ots@gmail.com',2, NULL);
 INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL);`}
-                downloadLink="/projects/data-analysis-pandas.py"
+                downloadLink="/gng-construct.sql"
                 codeType="sql"
             />
             <ProjectHeader
@@ -116,7 +116,7 @@ def insertIntoDonatesTable(self):
     except psycopg2.Error as e:
         dbconn.rollback()
         print("Error inserting into DONATES table:", e)`}
-                downloadLink="/projects/python-database-management.py"
+                downloadLink="/gng.py"
                 codeType="python"
             />
         </div>
