@@ -16,7 +16,7 @@
 
     async function handleSubmit() {
         try {
-            const response = await fetch('/api/app', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -28,13 +28,15 @@
                 })
             });
 
+            const responseData = await response.json();
+
             if (response.ok) {
-                alert('Your message has been sent successfully!');
+                alert(responseData.message);
                 name = '';
                 email = '';
                 message = '';
             } else {
-                alert('Error sending the message.');
+                alert(responseData.error || 'Error sending the message.');
             }
         } catch (error) {
             console.error('Error:', error);
