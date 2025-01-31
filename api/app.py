@@ -15,7 +15,7 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('SMTP_EMAIL')
 
 mail = Mail(app)
 
-@app.route('/api/send-email', methods=['POST'])
+@app.route('/api/app', methods=['POST'])
 def send_mail():
     data = request.json
     name = data['name']

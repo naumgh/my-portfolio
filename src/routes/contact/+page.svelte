@@ -16,7 +16,7 @@
 
     async function handleSubmit() {
         try {
-            const response = await fetch('../../../api/send-email', {
+            const response = await fetch('/api/app', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
