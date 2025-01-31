@@ -42,7 +42,6 @@
                         <a
                             href={downloadLink}
                             download
-                            class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
                             aria-label="Download file"
                         >
                         Download it here.
