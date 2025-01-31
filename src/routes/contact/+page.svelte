@@ -13,6 +13,7 @@
     let name: string = '';
     let email: string = '';
     let message: string = '';
+    let isSubmitting: boolean = false
 
     async function handleSubmit() {
         try {
@@ -42,6 +43,10 @@
             console.error('Error:', error);
             alert('Failed to send message.');
         }
+
+        setTimeout(() => {
+            isSubmitting = false;
+        }, 5000);
     }
 
 </script>
@@ -88,9 +93,10 @@
 
         <!-- Submit Button -->
         <button type="submit" 
-            class="px-8 py-3 bg-accent hover:bg-green-500 rounded-lg text-surface font-semibold transition duration-300">
-            Send Message
+            class="px-8 py-3 bg-accent hover:bg-green-500 rounded-lg text-surface font-semibold transition duration-300 disabled:opacity-50" disabled={isSubmitting}>
+            {isSubmitting ? 'Send' : 'Send'}
         </button>
+        
     </form>
 
     <div class="mt-8">
