@@ -34,7 +34,8 @@
                   "Designed and normalized a relational database schema (3NF).",
                   "Implemented many-to-many relationships with junction tables.",
                   "Enforced referential integrity with foreign keys.",
-                  "Created complex queries for data aggregation and retrieval."
+                  "Created complex queries for data aggregation and retrieval.",
+                  "Full file(s) avaliable for download!"
                 ]}   
                 codeSnippet={`--Some table Definition Examples
 
@@ -98,7 +99,8 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
         "Implemented dynamic CRUD operations for campaigns, volunteers, and events.",
         "Created ASCII-based visualizations for financial insights (inflows, outflows, budgets).",
         "Handled complex SQL queries with Common Table Expressions (CTEs) for data aggregation.",
-        "Incorporated input validation and transaction rollbacks for error handling and data integrity."]}
+        "Incorporated input validation and transaction rollbacks for error handling and data integrity.",
+        "Full file(s) avaliable for download!"]}
                 codeSnippet={`# Sample Code: Insert Donations with ON CONFLICT Handling
   
 def insertIntoDonatesTable(self):
@@ -119,7 +121,53 @@ def insertIntoDonatesTable(self):
                 downloadLink="/gng.py"
                 codeType="python"
             />
+
+
+<ProjectCard
+    title="Medical Insurance Cost Prediction"
+    description="A machine learning pipeline to predict insurance costs based on patient demographics using Scikit-Learn, Pandas, and NumPy. Includes feature engineering, model training, and cross-validation."
+    highlights={[
+        "Implemented a full Scikit-Learn preprocessing pipeline with StandardScaler and OneHotEncoder.",
+        "Utilized DecisionTreeRegressor and RandomForestRegressor for cost prediction.",
+        "Performed hyperparameter tuning with RandomizedSearchCV for model optimization.",
+        "Applied log transformation to normalize skewed distributions.",
+        "Engineered features based on regional, lifestyle, and demographic factors.",
+        "Integrated cross-validation to improve model generalization.",
+        "Full file(s) available for download!"
+    ]}
+    codeSnippet={`# Scikit-Learn Preprocessing Pipeline for Insurance Cost Prediction
+
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.pipeline import make_pipeline
+from sklearn.linear_model import LinearRegression
+
+# Define numerical and categorical attributes
+num_attribs = ["age", "bmi", "children"]
+cat_attribs = ["sex", "smoker", "region"]
+
+# Create transformation pipelines
+num_pipeline = make_pipeline(SimpleImputer(strategy="median"), StandardScaler())
+cat_pipeline = make_pipeline(SimpleImputer(strategy="most_frequent"), OneHotEncoder(handle_unknown="ignore"))
+
+# Combine pipelines using ColumnTransformer
+preprocessing = ColumnTransformer([
+    ("num", num_pipeline, num_attribs),
+    ("cat", cat_pipeline, cat_attribs)
+])
+
+# Create a model pipeline with preprocessing and Linear Regression
+model_pipeline = make_pipeline(preprocessing, LinearRegression())
+
+# Train the model
+model_pipeline.fit(train_set.drop("charges", axis=1), train_set["charges"])
+print("Model trained successfully!")`}
+    downloadLink="/medical_cost_prediction.py"
+    codeType="python"
+/>
         </div>
+        
 
 
        
