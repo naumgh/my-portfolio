@@ -66,7 +66,7 @@
         />
 
         <!-- Email Input -->
-        <label for="email" class="text-secondary">Email</label>
+        <label for="email" class="text-secondary">Your Email</label>
         <input
             type="email"
             id="email"
