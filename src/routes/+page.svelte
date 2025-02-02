@@ -21,19 +21,16 @@ name can now be set from ouside the component, by a parent component
 
 <Navbar />
 
-<main class="flex flex-col items-center justify-center min-h-screen bg-background text-primary font-sans">
+<main class="flex flex-col items-center justify-center min-h-screen bg-background text-primary font-sans text-center">
 
     <img src="/me2.jpg" alt="Naum Hoffman" class="w-36 h-36 rounded-full border-2 border-accent shadow-lg mb-6">
 
-    <h1 class="text-6xl font-bold mb-2">{name}</h1>
-    <p class="text-xl text-secondary mb-6">{jobTitle}</p>
-
-    
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">{name}</h1>
+    <p class="text-lg sm:text-xl text-secondary mb-6">{jobTitle}</p>
 
     <a href="/projects" 
        class="px-8 py-3 bg-accent hover:bg-green-500 rounded-lg text-surface font-semibold transition duration-300">
         See My Work
     </a>
-
 
 </main>
