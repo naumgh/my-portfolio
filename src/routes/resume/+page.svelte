@@ -23,8 +23,8 @@
         <div class="flex flex-col w-full space-y-2 mb-6">
             <p class="text-sm text-secondary">
                 Hey, I'm <span class="font-bold text-primary">Naum Hoffman</span>. 
-                I have a passion for creating <span class="text-accent font-semibold">Machine Learning</span> 
-                and <span class="text-accent font-semibold">AI Projects</span>.
+                I am passionate about <span class="text-accent font-semibold">software engineering </span> 
+                and <span class="text-accent font-semibold">data science</span>, and I aspire to build a successful career in these fields.
             </p>
             <p class="text-sm text-secondary">
                 Want to see my full resume? 
