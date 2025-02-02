@@ -163,7 +163,7 @@ model_pipeline = make_pipeline(preprocessing, LinearRegression())
 # Train the model
 model_pipeline.fit(train_set.drop("charges", axis=1), train_set["charges"])
 print("Model trained successfully!")`}
-    downloadLink="/medical_cost_prediction.py"
+    downloadLink="/medical_costs_post.ipynb"
     codeType="python"
 />
         </div>
