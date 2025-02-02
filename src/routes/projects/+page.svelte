@@ -91,7 +91,7 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
             titleColor="#306998"
             />
             <ProjectCard
-                title="Database Interaction and Management System"
+                title="Database Management System"
                 description="A Python-based interactive application for managing campaign, volunteer, donation, and event data, backed by PostgreSQL. Includes modular design, advanced SQL queries, and intuitive data visualization."
                 highlights={[
                     "Utilized Psycopg2 for robust PostgreSQL database connections and query execution.",
