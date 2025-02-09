@@ -166,11 +166,66 @@ print("Model trained successfully!")`}
     downloadLink="/medical_costs_post.ipynb"
     codeType="python"
 />
+
+<ProjectCard
+title="Search Algorithms Implementation"
+description="Implemented Uniform-Cost Search (UCS), A* Search, and Heuristic-based Pathfinding in Python to solve AI search problems."
+highlights={[
+    "Designed and implemented Uniform-Cost Search (UCS) for optimal pathfinding.",
+    "Developed an A* Search algorithm with heuristic evaluation.",
+    "Utilized priority queues for efficient frontier management.",
+    "Implemented graph traversal with state expansion and cost tracking.",
+    "Applied search algorithms to AI-related pathfinding problems.",
+    "Full file(s) available for download!"
+]}
+codeSnippet={`# A* Search Algorithm Implementation
+
+import heapq
+
+def a_star_search(start, goal, graph, heuristic):
+frontier = []
+heapq.heappush(frontier, (0, start))  # (priority, node)
+came_from = {start: None}
+cost_so_far = {start: 0}
+
+while frontier:
+    _, current = heapq.heappop(frontier)
+
+    if current == goal:
+        break
+
+    for neighbor, cost in graph[current]:
+        new_cost = cost_so_far[current] + cost
+        if neighbor not in cost_so_far or new_cost < cost_so_far[neighbor]:
+            cost_so_far[neighbor] = new_cost
+            priority = new_cost + heuristic(neighbor, goal)
+            heapq.heappush(frontier, (priority, neighbor))
+            came_from[neighbor] = current
+
+return came_from, cost_so_far
+
+# Example Heuristic Function (Manhattan Distance)
+def heuristic(node, goal):
+return abs(node[0] - goal[0]) + abs(node[1] - goal[1])
+
+# Example Graph Representation
+graph = {
+'A': [('B', 1), ('C', 4)],
+'B': [('A', 1), ('D', 2), ('E', 5)],
+'C': [('A', 4), ('F', 3)],
+'D': [('B', 2)],
+'E': [('B', 5), ('F', 1)],
+'F': [('C', 3), ('E', 1)]
+}
+
+came_from, cost_so_far = a_star_search('A', 'F', graph, heuristic)
+print("Path cost:", cost_so_far['F'])
+`}
+downloadLink="/a1_q456.py"
+codeType="python"
+/>
+
         </div>
-        
-
-
-       
         <Footer />
     </div>
 </main>
