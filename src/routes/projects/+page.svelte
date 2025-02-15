@@ -15,7 +15,7 @@
     
     <main class="p-6 bg-background text-primary font-sans min-h-screen">
     <!-- Page Container with Max Width -->
-    <nav class="mb-6 p-4 bg-gray-200 rounded-md">
+    <nav class="mb-6 p-4 rounded-md">
         <h2 class="text-lg font-semibold">Table of Contents</h2>
         <ul class="list-disc pl-6">
             <li><a href="#sql-projects" class="text-blue-500 hover:underline">SQL Projects</a></li>
