@@ -16,29 +16,18 @@
     <main class="p-6 bg-background text-primary font-sans min-h-screen">
     <!-- Page Container with Max Width -->
     <nav class="mb-6 p-4 rounded-md shadow-md">
-        <h2 class="text-lg font-semibold mb-2">📁 Project Files</h2>
-        <ul class="pl-2 text-gray-800">
+        <h2 class="text-lg font-semibold mb-2">Table of Contents</h2>
+        <pre class="pl-2 text-gray-800">
           
-          <!-- SQL Projects -->
-          <li class="mb-2">
-            <span class="font-semibold">📂 SQL Projects</span>
-            <ul class="pl-6 text-gray-700">
-              <li>📄 <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></li>
-            </ul>
-          </li>
-      
-          <!-- Python Projects -->
-          <li class="mb-2">
-            <span class="font-semibold">📂 Python Projects</span>
-            <ul class="pl-6 text-gray-700">
-              <li>📄 <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a></li>
-              <li>📄 <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></li>
-              <li>📄 <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></li>
-            </ul>
-          </li>
-          
-        </ul>
-      </nav>
+            SQL Projects/
+            │── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a>
+            │
+            Python Projects/
+            │── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a>
+            │── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a>
+            │── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a>
+              </pre>
+            </nav>
 
     <div class="max-w-10xl mx-auto px-6">
         <!-- Python ML/AI Projects -->
