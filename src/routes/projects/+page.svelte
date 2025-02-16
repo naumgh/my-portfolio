@@ -17,7 +17,7 @@
     <!-- Page Container with Max Width -->
     <nav class="mb-6 p-4 rounded-md shadow-md">
         <h2 class="text-lg font-semibold mb-2">Table of Contents</h2>
-<pre class="pl-2 text-blue-700">
+<pre class="pl-2 text-accent">
     
     SQL Projects/
     │── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a>
