@@ -13,6 +13,7 @@
     export let codeSnippet: string;
     export let downloadLink: string;
     export let codeType: string;
+    export let id: string;
 
     let isExpanded = false;
 

@@ -17,7 +17,8 @@
     <!-- Page Container with Max Width -->
     <nav class="mb-6 p-4 rounded-md shadow-md">
         <h2 class="text-lg font-semibold mb-2">Table of Contents</h2>
-<pre class="pl-2 text-accent">
+    <pre class="pl-2 text-accent font-mono bg-gray-100 p-2 rounded-md">
+
     
     SQL Projects/
     │── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a>
@@ -42,6 +43,7 @@
         <!-- Project Cards -->
         <div class="space-y-6">
             <ProjectCard
+                id = "sql-schema"
                 title="Database Schema Design Showcase"
                 description="Designed a relational database schema to manage campaigns, donations, volunteers, and expenses. Ensured data integrity using primary and foreign keys, while optimizing queries for efficient data retrieval."
                 highlights={[
@@ -105,6 +107,7 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
             titleColor="#306998"
             />
             <ProjectCard
+                id = "db-management"
                 title="Database Management System"
                 description="A Python-based interactive application for managing campaign, volunteer, donation, and event data, backed by PostgreSQL. Includes modular design, advanced SQL queries, and intuitive data visualization."
                 highlights={[
@@ -138,6 +141,7 @@ def insertIntoDonatesTable(self):
 
 
 <ProjectCard
+    id = "ml-project"
     title="Medical Insurance Cost Prediction"
     description="A machine learning pipeline to predict insurance costs based on patient demographics using Scikit-Learn, Pandas, and NumPy. Includes feature engineering, model training, and cross-validation."
     highlights={[
@@ -182,6 +186,7 @@ print("Model trained successfully!")`}
 />
 
 <ProjectCard
+id="search-algorithms"
 title="Search Algorithms Implementation"
 description="Implemented Uniform-Cost Search (UCS), A* Search, and Heuristic-based Pathfinding in Python to solve AI search problems."
 highlights={[
