@@ -17,7 +17,7 @@
     <!-- Page Container with Max Width -->
     <nav class="mb-6 p-4 rounded-md shadow-md">
         <h2 class="text-lg font-semibold mb-2">Table of Contents</h2>
-    <pre class="pl-2 text-accent font-mono bg-gray-100 p-2 rounded-md">
+    <pre class="pl-2 text-accent font-mono p-2 rounded-md">
 
     
     SQL Projects/
