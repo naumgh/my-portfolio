@@ -31,7 +31,6 @@
     </nav>
 
     <div class="max-w-10xl mx-auto px-6">
-        <!-- Python ML/AI Projects -->
         
         <ProjectHeader
             title="SQL Projects"
