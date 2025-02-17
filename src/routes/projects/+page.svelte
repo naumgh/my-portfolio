@@ -17,16 +17,14 @@
     <!-- Page Container with Max Width -->
     <nav class="mb-6 p-4 rounded-md shadow-md">
         <h2 class="text-lg font-semibold mb-2">Table of Contents</h2>
-    <div class="pl-2 text-accent font-mono p-2 rounded-md">
-
-    
-    SQL Projects/
-    │── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a>
-    │
-    Python Projects/
-    │── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a>
-    │── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a>
-    │── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a>
+        <div class="pl-2 text-accent font-mono p-2 rounded-md">
+            <p>SQL Projects/</p>
+            <p class="pl-4">│── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></p>
+            
+            <p>Python Projects/</p>
+            <p class="pl-4">│── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a></p>
+            <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
+            <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
         </div>
     </nav>
 
