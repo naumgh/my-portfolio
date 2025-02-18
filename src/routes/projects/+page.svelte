@@ -28,7 +28,7 @@
         </div>
     </nav>
 
-    <div class="max-w-10xl mx-auto px-6">
+    <div class="max-w-10xl mx-auto px-[20vw]">
         
         <ProjectHeader
             title="SQL Projects"
