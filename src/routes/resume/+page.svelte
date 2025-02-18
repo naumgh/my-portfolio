@@ -5,7 +5,7 @@
 
 <Navbar />
 
-<main class="p-6 bg-background text-primary font-sans min-h-screen">
+<main class="px-[20vw] bg-background text-primary font-sans min-h-screen">
     <!-- Resume Summary -->
     <div class="flex items-center space-x-3 mb-4 max-w-2xl mx-auto">
         <h1 class="text-xl font-bold">Resume Overview</h1>
