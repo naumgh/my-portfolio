@@ -11,13 +11,13 @@
     
 </script>
     
-    <Navbar />
+<Navbar />
     
-    <main class="p-6 bg-background text-primary font-sans min-h-screen">
+<main class="p-4 sm:p-6 bg-background text-primary font-sans min-h-screen">
     <!-- Page Container with Max Width -->
-    <nav class="mb-6 px-[20vw] py-4 rounded-md shadow-md">
-        <h2 class="text-lg font-semibold mb-2">Table of Contents</h2>
-        <div class="pl-2 text-accent font-mono p-2 rounded-md">
+    <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-[20vw] py-4 rounded-md shadow-md">
+        <h2 class="text-base sm:text-lg font-semibold mb-2">Table of Contents</h2>
+        <div class="pl-2 text-accent font-mono p-2 rounded-md text-sm sm:text-base">
             <p>SQL Projects/</p>
             <p class="pl-4">│── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></p>
             
@@ -28,7 +28,7 @@
         </div>
     </nav>
 
-    <div class="max-w-10xl mx-auto px-[20vw]">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-[20vw]">
         
         <ProjectHeader
             title="SQL Projects"
@@ -245,4 +245,3 @@ codeType="python"
         <Footer />
     </div>
 </main>
-
