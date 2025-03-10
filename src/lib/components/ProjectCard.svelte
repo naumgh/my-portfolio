@@ -6,7 +6,6 @@
     import "prismjs/components/prism-python";
     import "prismjs/themes/prism-tomorrow.css";
 
-
     export let title: string;
     export let description: string;
     export let highlights: string[];
@@ -18,7 +17,6 @@
     let isExpanded = false;
 
     onMount(() => {
-        console.log("code highlighting executed");
         Prism.highlightAll(); // Apply syntax highlighting
     });
 
@@ -31,13 +29,15 @@
     }
 </script>
 
-<div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md h-auto max-h-[40rem] overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
+<div 
+    id={id} 
+    class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md overflow-x-auto 
+           scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded
+           w-full max-w-screen-lg lg:max-w-screen-xl mx-auto p-4"
+>
     <!-- Sticky Header -->
-    <div
-        class="sticky top-0 z-10 bg-surface border-b border-gray-700"
-        style="position: -webkit-sticky; position: sticky; left: 0;"
-    >
-        <div class="flex items-center justify-between p-2" style="min-width: max-content;">
+    <div class="sticky top-0 z-10 bg-surface border-b border-gray-700">
+        <div class="flex items-center justify-between p-2">
             <h2 class="text-xs font-bold text-primary">{title}</h2>
             <div class="flex items-center space-x-2">
                 <a
@@ -91,14 +91,13 @@
             {/each}
         </ul>
         <pre 
-        class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-        style="font-size: 0.75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
-            <code class={`language-${codeType}`} style="font-size: inherit; line-height: inherit;">
+        class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded
+               text-sm md:text-base lg:text-lg p-4 bg-gray-800 text-white rounded-lg"
+        >
+            <code class={`language-${codeType}`}>
                 {codeSnippet}
             </code>
         </pre>
-        
-       
     </div>
 </div>
 
