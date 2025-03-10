@@ -17,8 +17,8 @@
     });
 </script>
 
-<div class="fixed inset-0 z-50 bg-opacity-50 flex items-center justify-center p-4">
-    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full max-h-[90vh] flex flex-col">
+<div class="fixed inset-0 z-50 bg-opacity-50 flex flex-col p-4">
+    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full h-full flex flex-col">
         <!-- Header -->
         <div class="bg-surface border-b border-gray-700 shrink-0">
             <div class="flex items-center justify-between p-2" style="min-width: max-content;">
