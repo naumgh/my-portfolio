@@ -31,7 +31,7 @@
     }
 </script>
 
-<div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md h-auto max-h-[40rem] overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
+<div id={id} class="w-full max-w-screen-lg mx-auto bg-surface relative border border-gray-300/20 rounded-lg shadow-md h-auto max-h-[40rem] overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
     <!-- Sticky Header -->
     <div
         class="sticky top-0 z-10 bg-surface border-b border-gray-700"
@@ -91,7 +91,7 @@
             {/each}
         </ul>
         <pre 
-        class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
+        class="w-full overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
         style="font-size: 0.75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
             <code class={`language-${codeType}`} style="font-size: inherit; line-height: inherit;">
                 {codeSnippet}
