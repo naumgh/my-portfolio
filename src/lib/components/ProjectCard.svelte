@@ -6,6 +6,7 @@
     import "prismjs/components/prism-python";
     import "prismjs/themes/prism-tomorrow.css";
 
+
     export let title: string;
     export let description: string;
     export let highlights: string[];
@@ -30,18 +31,16 @@
     }
 </script>
 
-<div 
-    id={id} 
-    class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md 
-           w-full max-w-md mx-auto flex flex-col p-4"
->
+<div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md 
+           w-full max-w-screen-lg lg:max-w-screen-xl mx-auto 
+           flex flex-col">
     <!-- Sticky Header -->
     <div
         class="sticky top-0 z-10 bg-surface border-b border-gray-700"
         style="position: -webkit-sticky; position: sticky; left: 0;"
     >
         <div class="flex items-center justify-between p-2 w-full" style="min-width: max-content;">
-            <h2 class="text-sm font-bold text-primary">{title}</h2>
+            <h2 class="text-xs font-bold text-primary">{title}</h2>
             <div class="flex items-center space-x-2">
                 <a
                     href={downloadLink}
@@ -94,13 +93,14 @@
             {/each}
         </ul>
         <pre 
-            class="w-full overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-            style="font-size: 0.75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;"
-        >
+        class="w-full overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
+        style="font-size: 0.75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
             <code class={`language-${codeType}`} style="font-size: inherit; line-height: inherit;">
                 {codeSnippet}
             </code>
         </pre>
+        
+       
     </div>
 </div>
 
