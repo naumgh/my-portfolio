@@ -48,7 +48,9 @@
 
         <!-- Content -->
         <div class="p-4">
-            <p class="text-sm text-secondary mb-4">{description}</p>
+            <p class="text-sm text-secondary mb-4"
+            style="font-size: 0.65rem; line-height: .75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;">{description}
+            </p>
             <ul class="text-sm text-secondary list-disc pl-5 mb-4">
                 {#each highlights as highlight}
                     <li>{highlight}</li>
@@ -56,7 +58,7 @@
             </ul>
             <pre 
             class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-            style="font-size: 0.50rem; line-height: .75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;">
+            style="font-size: 0.65rem; line-height: .75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;">
                 <code class={`language-${codeType}`}>{codeSnippet}</code>
             </pre>
         </div>
