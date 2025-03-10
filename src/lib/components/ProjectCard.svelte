@@ -33,7 +33,7 @@
 <div 
     id={id} 
     class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md 
-           w-full min-w-[20rem] max-w-2xl mx-auto flex flex-col"
+           w-full min-w-[20rem] max-w-3xl mx-auto flex flex-col"
 >
     <!-- Sticky Header -->
     <div
