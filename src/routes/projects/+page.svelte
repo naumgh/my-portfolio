@@ -13,11 +13,11 @@
 
 <Navbar />
 
-<main class="p-4 sm:p-6 text-primary font-sans min-h-screen">
+<main class="p-4 sm:p-6 bg-background text-primary font-sans min-h-screen">
     <!-- Page Container with Adjusted Max Width -->
     <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
         <!-- Table of Contents -->
-        <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-6 py-4 rounded-md shadow-md bg-gray-900 text-white">
+        <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-6 py-4 rounded-md shadow-md text-white">
             <h2 class="text-base sm:text-lg font-semibold mb-2">Table of Contents</h2>
             <div class="pl-2 text-accent font-mono p-2 rounded-md text-sm sm:text-base">
                 <p>SQL Projects/</p>
