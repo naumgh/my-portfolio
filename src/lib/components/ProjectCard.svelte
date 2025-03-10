@@ -6,7 +6,6 @@
     import "prismjs/components/prism-python";
     import "prismjs/themes/prism-tomorrow.css";
 
-
     export let title: string;
     export let description: string;
     export let highlights: string[];
@@ -32,20 +31,19 @@
 </script>
 
 <div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md 
-           w-full max-w-screen-lg lg:max-w-screen-xl mx-auto 
-           flex flex-col">
+           w-full mx-auto flex flex-col">
     <!-- Sticky Header -->
     <div
         class="sticky top-0 z-10 bg-surface border-b border-gray-700"
         style="position: -webkit-sticky; position: sticky; left: 0;"
     >
-        <div class="flex items-center justify-between p-2 w-full" style="min-width: max-content;">
-            <h2 class="text-xs font-bold text-primary">{title}</h2>
+        <div class="flex items-center justify-between p-4 w-full" style="min-width: max-content;">
+            <h2 class="text-sm md:text-lg font-bold text-primary">{title}</h2>
             <div class="flex items-center space-x-2">
                 <a
                     href={downloadLink}
                     download
-                    class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
+                    class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-surface hover:bg-gray-700 transition"
                     aria-label="Download file"
                 >
                     <svg
@@ -54,7 +52,7 @@
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         stroke-width="2"
-                        class="w-5 h-5"
+                        class="w-5 h-5 md:w-6 md:h-6"
                     >
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 16V8M8 12l4 4 4-4" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" />
@@ -62,7 +60,7 @@
                 </a>
                 <button
                     on:click={openExpandedWindow}
-                    class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
+                    class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-surface hover:bg-gray-700 transition"
                     aria-label="Expand window"
                 >
                     <svg
@@ -71,7 +69,7 @@
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         stroke-width="2"
-                        class="w-6 h-6"
+                        class="w-6 h-6 md:w-7 md:h-7"
                     >
                         <path
                             stroke-linecap="round"
@@ -85,22 +83,20 @@
     </div>
 
     <!-- Content -->
-    <div class="p-4">
-        <p class="text-sm text-secondary mb-4">{description}</p>
-        <ul class="text-sm text-secondary list-disc pl-5">
+    <div class="p-4 md:p-6">
+        <p class="text-sm md:text-base text-secondary mb-4">{description}</p>
+        <ul class="text-sm md:text-base text-secondary list-disc pl-5">
             {#each highlights as highlight}
                 <li>{highlight}</li>
             {/each}
         </ul>
         <pre 
         class="w-full overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-        style="font-size: 0.75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
+        style="font-size: 0.875rem; padding: 1.5rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
             <code class={`language-${codeType}`} style="font-size: inherit; line-height: inherit;">
                 {codeSnippet}
             </code>
         </pre>
-        
-       
     </div>
 </div>
 
@@ -115,3 +111,11 @@
         onClose={closeExpandedWindow}
     />
 {/if}
+
+<style>
+    @media (min-width: 1024px) {
+        pre {
+            font-size: 1rem !important;
+        }
+    }
+</style>
