@@ -48,10 +48,9 @@
 
         <!-- Content -->
         <div class="p-4">
-            <p class="text-sm text-secondary mb-4"
-            style="font-size: 0.65rem; line-height: .75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;">{description}
+            <p class="font-size: 0.65rem text-secondary mb-4">{description}
             </p>
-            <ul class="text-sm text-secondary list-disc pl-5 mb-4">
+            <ul class="font-size: 0.65rem text-secondary list-disc pl-5 mb-4">
                 {#each highlights as highlight}
                     <li>{highlight}</li>
                 {/each}
