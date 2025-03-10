@@ -44,7 +44,7 @@
 
         <!-- Content -->
         <div class="flex-1 p-4 flex flex-col" style="overflow: hidden;">
-            <p class="text-secondary mb-4" style="font-size: 0.5rem; line-height: 1.1rem;">{description}</p>
+            <p class="text-secondary mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">{description}</p>
             {#if highlights.length > 0}
                 <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">
                     {#each highlights as highlight}
@@ -54,11 +54,11 @@
             {/if}
             <pre 
                 class="flex-1"
-                style="padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; overflow: hidden;"
+                style="padding: 0.75rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; overflow: hidden;"
             >
                 <code 
                     class={`language-${codeType}`} 
-                    style="font-size: 0.7rem; line-height: 1rem; white-space: pre-wrap; display: block; height: 100%;"
+                    style="font-size: 0.7rem; line-height: .75rem; white-space: pre-wrap; display: block; height: 100%;"
                 >{codeSnippet}</code>
             </pre>
         </div>
