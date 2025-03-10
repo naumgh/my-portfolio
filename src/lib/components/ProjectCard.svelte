@@ -31,7 +31,9 @@
     }
 </script>
 
-<div id={id} class="w-full max-w-screen-lg mx-auto bg-surface relative border border-gray-300/20 rounded-lg shadow-md h-auto max-h-[40rem] overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
+<div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md h-auto 
+           max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 
+           w-full mx-auto p-4">
     <!-- Sticky Header -->
     <div
         class="sticky top-0 z-10 bg-surface border-b border-gray-700"
