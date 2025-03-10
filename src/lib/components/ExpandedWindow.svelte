@@ -44,7 +44,7 @@
 
         <!-- Content -->
         <div class="flex-1 p-4 flex flex-col" style="overflow: hidden;">
-            <p class="text-secondary mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">{description}</p>
+            <p class="text-secondary mb-4" style="font-size: 0.5rem; line-height: 1.1rem;">{description}</p>
             {#if highlights.length > 0}
                 <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">
                     {#each highlights as highlight}
