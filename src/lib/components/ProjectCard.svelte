@@ -37,7 +37,7 @@
         class="sticky top-0 z-10 bg-surface border-b border-gray-700"
         style="position: -webkit-sticky; position: sticky; left: 0;"
     >
-        <div class="flex items-center justify-between p-2" style="min-width: max-content;">
+        <div class="flex items-center justify-between p-2 w-full" style="min-width: max-content;">
             <h2 class="text-xs font-bold text-primary">{title}</h2>
             <div class="flex items-center space-x-2">
                 <a
