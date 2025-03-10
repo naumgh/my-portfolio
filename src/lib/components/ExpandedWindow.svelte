@@ -56,7 +56,7 @@
             </ul>
             <pre 
             class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-            style="font-size: 0.75rem; line-height: 1.25rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;">
+            style="font-size: 0.70rem; line-height: .8rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;">
                 <code class={`language-${codeType}`}>{codeSnippet}</code>
             </pre>
         </div>
