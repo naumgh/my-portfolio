@@ -43,7 +43,10 @@
         </div>
 
         <!-- Content -->
-        <div class="flex-1 p-4 flex flex-col overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
+        <div 
+            class="flex-1 p-4 flex flex-col overflow-y-auto custom-scrollbar"
+            style="scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;"
+        >
             <p class="text-secondary mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">{description}</p>
             {#if highlights.length > 0}
                 <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">
@@ -64,3 +67,29 @@
         </div>
     </div>
 </div>
+
+<style>
+    /* Standard scrollbar styles for Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #555555 #1a1a1a;
+    }
+
+    /* Webkit scrollbar styles for Chrome, Safari, Edge */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1a1a1a;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #555555;
+        border-radius: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #666666;
+    }
+</style>
