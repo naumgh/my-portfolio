@@ -10,18 +10,21 @@
     export let highlights: string[];
     export let codeSnippet: string;
     export let codeType: string;
-    export let onClose: () => void;
+    export let onClose: () => void; // Callback to close the expanded window
 
     onMount(() => {
         console.log("code highlighting executed");
-        Prism.highlightAll();
+        Prism.highlightAll(); // Apply syntax highlighting
     });
 </script>
 
 <div class="fixed inset-0 z-50 bg-opacity-50 flex items-center justify-center">
-    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full h-full flex flex-col">
+    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full h-full overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
         <!-- Header -->
-        <div class="sticky top-0 z-10 bg-surface border-b border-gray-700 shrink-0">
+        <div
+            class="sticky top-0 z-10 bg-surface border-b border-gray-700"
+            style="position: -webkit-sticky; position: sticky; left: 0;"
+        >
             <div class="flex items-center justify-between p-2" style="min-width: max-content;">
                 <h2 class="text-xs font-bold text-white">{title}</h2>
                 <button
@@ -44,21 +47,18 @@
         </div>
 
         <!-- Content -->
-        <div class="p-4 flex-1 flex flex-col overflow-hidden">
-            <div class="flex-1 overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
-                <p class="text-sm text-secondary mb-4">{description}</p>
-                <ul class="text-sm text-secondary list-disc pl-5 mb-4">
-                    {#each highlights as highlight}
-                        <li>{highlight}</li>
-                    {/each}
-                </ul>
-                <pre 
-                    class="flex-1 overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-                    style="font-size: 0.75rem; line-height: 1.25rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;"
-                >
-                    <code class={`language-${codeType}`}>{codeSnippet}</code>
-                </pre>
-            </div>
+        <div class="p-4">
+            <p class="text-sm text-secondary mb-4">{description}</p>
+            <ul class="text-sm text-secondary list-disc pl-5 mb-4">
+                {#each highlights as highlight}
+                    <li>{highlight}</li>
+                {/each}
+            </ul>
+            <pre 
+            class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
+            style="font-size: 0.75rem; line-height: 1.25rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
+                <code class={`language-${codeType}`}>{codeSnippet}</code>
+            </pre>
         </div>
     </div>
 </div>
