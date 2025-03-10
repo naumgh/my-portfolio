@@ -43,7 +43,7 @@
         </div>
 
         <!-- Content -->
-        <div class="flex-1 p-4 flex flex-col" style="overflow: auto;">
+        <div class="flex-1 p-4 flex flex-col overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
             <p class="text-secondary mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">{description}</p>
             {#if highlights.length > 0}
                 <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">
@@ -54,11 +54,11 @@
             {/if}
             <pre 
                 class="flex-1"
-                style="padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; overflow: hidden;"
+                style="padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;"
             >
                 <code 
                     class={`language-${codeType}`} 
-                    style="font-size: 0.7rem; line-height: .8rem; white-space: pre-wrap; display: block; height: 100%;"
+                    style="font-size: 0.7rem; line-height: .8rem; white-space: pre-wrap; display: block;"
                 >{codeSnippet}</code>
             </pre>
         </div>
