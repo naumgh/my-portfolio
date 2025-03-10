@@ -13,7 +13,7 @@
 
 <Navbar />
 
-<main class="p-4 sm:p-6 bg-background text-primary font-sans min-h-screen">
+<main class="p-4 sm:p-6 text-primary font-sans min-h-screen">
     <!-- Page Container with Adjusted Max Width -->
     <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
         <!-- Table of Contents -->
