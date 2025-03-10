@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
     //@ts-ignore
     import Prism from "prismjs";
     import "prismjs/components/prism-sql";
@@ -12,25 +12,45 @@
     export let codeType: string;
     export let onClose: () => void;
 
-    let fontSize = 16;
+    let fontSize = 16; // Initial font size in pixels
     let contentContainer: HTMLDivElement | undefined;
+    let observer: ResizeObserver | undefined;
 
     onMount(() => {
         Prism.highlightAll();
         adjustFontSize();
+        setupResizeObserver();
+    });
+
+    onDestroy(() => {
+        if (observer) observer.disconnect();
     });
 
     function adjustFontSize() {
         if (!contentContainer) return;
 
         const maxHeight = window.innerHeight * 0.9;
-        let currentFontSize = fontSize;
-
-        while (contentContainer.scrollHeight > maxHeight && currentFontSize > 8) {
+        let currentFontSize = 16; // Reset to initial size each time
+        
+        // Reset to initial size first
+        contentContainer.style.fontSize = `${currentFontSize}px`;
+        
+        // If content is too tall, reduce font size
+        while (contentContainer.offsetHeight > maxHeight && currentFontSize > 8) {
             currentFontSize -= 0.5;
             contentContainer.style.fontSize = `${currentFontSize}px`;
         }
+        
         fontSize = currentFontSize;
+    }
+
+    function setupResizeObserver() {
+        if (!contentContainer) return;
+        
+        observer = new ResizeObserver(() => {
+            adjustFontSize();
+        });
+        observer.observe(contentContainer);
     }
 </script>
 
