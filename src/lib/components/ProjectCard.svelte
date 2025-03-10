@@ -31,9 +31,9 @@
     }
 </script>
 
-<div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md h-auto 
-           max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 
-           w-full mx-auto p-4">
+<div id={id} class="bg-surface relative border border-gray-300/20 rounded-lg shadow-md 
+           w-full max-w-screen-lg lg:max-w-screen-xl mx-auto 
+           flex flex-col">
     <!-- Sticky Header -->
     <div
         class="sticky top-0 z-10 bg-surface border-b border-gray-700"
