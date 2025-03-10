@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount, onDestroy } from 'svelte';
+    import { onMount } from 'svelte';
     //@ts-ignore
     import Prism from "prismjs";
     import "prismjs/components/prism-sql";
@@ -12,46 +12,9 @@
     export let codeType: string;
     export let onClose: () => void;
 
-    let fontSize = 16; // Initial font size in pixels
-    let contentContainer: HTMLDivElement | undefined;
-    let observer: ResizeObserver | undefined;
-
     onMount(() => {
         Prism.highlightAll();
-        adjustFontSize();
-        setupResizeObserver();
     });
-
-    onDestroy(() => {
-        if (observer) observer.disconnect();
-    });
-
-    function adjustFontSize() {
-        if (!contentContainer) return;
-
-        const maxHeight = window.innerHeight * 0.9;
-        let currentFontSize = 16; // Reset to initial size each time
-        
-        // Reset to initial size first
-        contentContainer.style.fontSize = `${currentFontSize}px`;
-        
-        // If content is too tall, reduce font size
-        while (contentContainer.offsetHeight > maxHeight && currentFontSize > 8) {
-            currentFontSize -= 0.5;
-            contentContainer.style.fontSize = `${currentFontSize}px`;
-        }
-        
-        fontSize = currentFontSize;
-    }
-
-    function setupResizeObserver() {
-        if (!contentContainer) return;
-        
-        observer = new ResizeObserver(() => {
-            adjustFontSize();
-        });
-        observer.observe(contentContainer);
-    }
 </script>
 
 <div class="fixed inset-0 z-50 bg-opacity-50 flex items-center justify-center p-4">
@@ -80,35 +43,24 @@
         </div>
 
         <!-- Content -->
-        <div 
-            bind:this={contentContainer}
-            class="content-container flex-1 p-4 flex flex-col" 
-            style="overflow: hidden;"
-        >
-            <p class="text-secondary mb-4 line-clamp-3" style="min-height: 3em;">{description}</p>
+        <div class="flex-1 p-4 flex flex-col" style="overflow: hidden;">
+            <p class="text-secondary mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">{description}</p>
             {#if highlights.length > 0}
-                <ul class="text-secondary list-disc pl-5 mb-4" style="max-height: 30%;">
+                <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.75rem; line-height: 1.1rem;">
                     {#each highlights as highlight}
-                        <li class="line-clamp-2">{highlight}</li>
+                        <li>{highlight}</li>
                     {/each}
                 </ul>
             {/if}
             <pre 
-                class="flex-1 text-sm"
-                style="padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 60%; overflow: hidden;"
+                class="flex-1"
+                style="padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; overflow: hidden;"
             >
                 <code 
                     class={`language-${codeType}`} 
-                    style="white-space: pre-wrap; display: block; height: 100%;"
+                    style="font-size: 0.7rem; line-height: 1rem; white-space: pre-wrap; display: block; height: 100%;"
                 >{codeSnippet}</code>
             </pre>
         </div>
     </div>
 </div>
-
-<style>
-    .content-container {
-        font-size: 16px;
-        transition: font-size 0.1s ease;
-    }
-</style>
