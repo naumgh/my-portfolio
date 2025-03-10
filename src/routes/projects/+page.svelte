@@ -2,34 +2,34 @@
     //@ts-ignore
     import Navbar from "../../lib/components/Navbar.svelte";
     import Footer from "../../lib/components/Footer.svelte";
-    import { Octokit } from "octokit";
     import { onMount } from 'svelte';
     import ProjectCard from '../../lib/components/ProjectCard.svelte';
     import ProjectHeader from '../../lib/components/ProjectHeader.svelte';
 
-    //we scrapped the github repo stuff
-    
+    onMount(() => {
+        console.log("Page mounted");
+    });
 </script>
-    
-<Navbar />
-    
-<main class="p-4 sm:p-6 bg-background text-primary font-sans min-h-screen">
-    <!-- Page Container with Max Width -->
-    <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-[20vw] py-4 rounded-md shadow-md">
-        <h2 class="text-base sm:text-lg font-semibold mb-2">Table of Contents</h2>
-        <div class="pl-2 text-accent font-mono p-2 rounded-md text-sm sm:text-base">
-            <p>SQL Projects/</p>
-            <p class="pl-4">│── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></p>
-            
-            <p>Python Projects/</p>
-            <p class="pl-4">│── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a></p>
-            <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
-            <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
-        </div>
-    </nav>
 
-    <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-[20vw]">
-        
+<Navbar />
+
+<main class="p-4 sm:p-6 bg-background text-primary font-sans min-h-screen">
+    <!-- Page Container with Adjusted Max Width -->
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
+        <!-- Table of Contents -->
+        <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-6 py-4 rounded-md shadow-md bg-gray-900 text-white">
+            <h2 class="text-base sm:text-lg font-semibold mb-2">Table of Contents</h2>
+            <div class="pl-2 text-accent font-mono p-2 rounded-md text-sm sm:text-base">
+                <p>SQL Projects/</p>
+                <p class="pl-4">│── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></p>
+                
+                <p>Python Projects/</p>
+                <p class="pl-4">│── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a></p>
+                <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
+                <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
+            </div>
+        </nav>
+
         <ProjectHeader
             title="SQL Projects"
             iconSrc="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
@@ -40,15 +40,15 @@
         <!-- Project Cards -->
         <div class="space-y-6">
             <ProjectCard
-                id = "sql-schema"
+                id="sql-schema"
                 title="Database Schema Design Showcase"
                 description="Designed a relational database schema to manage campaigns, donations, volunteers, and expenses. Ensured data integrity using primary and foreign keys, while optimizing queries for efficient data retrieval."
                 highlights={[
-                  "Designed and normalized a relational database schema (3NF).",
-                  "Implemented many-to-many relationships with junction tables.",
-                  "Enforced referential integrity with foreign keys.",
-                  "Created complex queries for data aggregation and retrieval.",
-                  "Full file(s) avaliable for download!"
+                    "Designed and normalized a relational database schema (3NF).",
+                    "Implemented many-to-many relationships with junction tables.",
+                    "Enforced referential integrity with foreign keys.",
+                    "Created complex queries for data aggregation and retrieval.",
+                    "Full file(s) available for download!"
                 ]}   
                 codeSnippet={`--Some table Definition Examples
 
@@ -98,23 +98,24 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
                 codeType="sql"
             />
             <ProjectHeader
-            title="Python Projects"
-            iconSrc="https://www.vectorlogo.zone/logos/python/python-icon.svg"
-            iconAlt="Python Logo"
-            titleColor="#306998"
+                title="Python Projects"
+                iconSrc="https://www.vectorlogo.zone/logos/python/python-icon.svg"
+                iconAlt="Python Logo"
+                titleColor="#306998"
             />
             <ProjectCard
-                id = "db-management"
+                id="db-management"
                 title="Database Management System"
                 description="A Python-based interactive application for managing campaign, volunteer, donation, and event data, backed by PostgreSQL. Includes modular design, advanced SQL queries, and intuitive data visualization."
                 highlights={[
                     "Utilized Psycopg2 for robust PostgreSQL database connections and query execution.",
-        "Designed modular, class-based architecture for maintainability and scalability.",
-        "Implemented dynamic CRUD operations for campaigns, volunteers, and events.",
-        "Created ASCII-based visualizations for financial insights (inflows, outflows, budgets).",
-        "Handled complex SQL queries with Common Table Expressions (CTEs) for data aggregation.",
-        "Incorporated input validation and transaction rollbacks for error handling and data integrity.",
-        "Full file(s) avaliable for download!"]}
+                    "Designed modular, class-based architecture for maintainability and scalability.",
+                    "Implemented dynamic CRUD operations for campaigns, volunteers, and events.",
+                    "Created ASCII-based visualizations for financial insights (inflows, outflows, budgets).",
+                    "Handled complex SQL queries with Common Table Expressions (CTEs) for data aggregation.",
+                    "Incorporated input validation and transaction rollbacks for error handling and data integrity.",
+                    "Full file(s) available for download!"
+                ]}
                 codeSnippet={`# Sample Code: Insert Donations with ON CONFLICT Handling
   
 def insertIntoDonatesTable(self):
@@ -135,22 +136,20 @@ def insertIntoDonatesTable(self):
                 downloadLink="/gng.py"
                 codeType="python"
             />
-
-
-<ProjectCard
-    id = "ml-project"
-    title="Medical Insurance Cost Prediction"
-    description="A machine learning pipeline to predict insurance costs based on patient demographics using Scikit-Learn, Pandas, and NumPy. Includes feature engineering, model training, and cross-validation."
-    highlights={[
-        "Implemented a full Scikit-Learn preprocessing pipeline with StandardScaler and OneHotEncoder.",
-        "Utilized DecisionTreeRegressor and RandomForestRegressor for cost prediction.",
-        "Performed hyperparameter tuning with RandomizedSearchCV for model optimization.",
-        "Applied log transformation to normalize skewed distributions.",
-        "Engineered features based on regional, lifestyle, and demographic factors.",
-        "Integrated cross-validation to improve model generalization.",
-        "Full file(s) available for download!"
-    ]}
-    codeSnippet={`# Scikit-Learn Preprocessing Pipeline for Insurance Cost Prediction
+            <ProjectCard
+                id="ml-project"
+                title="Medical Insurance Cost Prediction"
+                description="A machine learning pipeline to predict insurance costs based on patient demographics using Scikit-Learn, Pandas, and NumPy. Includes feature engineering, model training, and cross-validation."
+                highlights={[
+                    "Implemented a full Scikit-Learn preprocessing pipeline with StandardScaler and OneHotEncoder.",
+                    "Utilized DecisionTreeRegressor and RandomForestRegressor for cost prediction.",
+                    "Performed hyperparameter tuning with RandomizedSearchCV for model optimization.",
+                    "Applied log transformation to normalize skewed distributions.",
+                    "Engineered features based on regional, lifestyle, and demographic factors.",
+                    "Integrated cross-validation to improve model generalization.",
+                    "Full file(s) available for download!"
+                ]}
+                codeSnippet={`# Scikit-Learn Preprocessing Pipeline for Insurance Cost Prediction
 
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
@@ -178,69 +177,67 @@ model_pipeline = make_pipeline(preprocessing, LinearRegression())
 # Train the model
 model_pipeline.fit(train_set.drop("charges", axis=1), train_set["charges"])
 print("Model trained successfully!")`}
-    downloadLink="/medical_costs_post.ipynb"
-    codeType="python"
-/>
-
-<ProjectCard
-id="search-algorithms"
-title="Search Algorithms Implementation"
-description="Implemented Uniform-Cost Search (UCS), A* Search, and Heuristic-based Pathfinding in Python to solve AI search problems."
-highlights={[
-    "Designed and implemented Uniform-Cost Search (UCS) for optimal pathfinding.",
-    "Developed an A* Search algorithm with heuristic evaluation.",
-    "Utilized priority queues for efficient frontier management.",
-    "Implemented graph traversal with state expansion and cost tracking.",
-    "Applied search algorithms to AI-related pathfinding problems.",
-    "Full file(s) available for download!"
-]}
-codeSnippet={`# A* Search Algorithm Implementation
+                downloadLink="/medical_costs_post.ipynb"
+                codeType="python"
+            />
+            <ProjectCard
+                id="search-algorithms"
+                title="Search Algorithms Implementation"
+                description="Implemented Uniform-Cost Search (UCS), A* Search, and Heuristic-based Pathfinding in Python to solve AI search problems."
+                highlights={[
+                    "Designed and implemented Uniform-Cost Search (UCS) for optimal pathfinding.",
+                    "Developed an A* Search algorithm with heuristic evaluation.",
+                    "Utilized priority queues for efficient frontier management.",
+                    "Implemented graph traversal with state expansion and cost tracking.",
+                    "Applied search algorithms to AI-related pathfinding problems.",
+                    "Full file(s) available for download!"
+                ]}
+                codeSnippet={`# A* Search Algorithm Implementation
 
 import heapq
 
 def a_star_search(start, goal, graph, heuristic):
-frontier = []
-heapq.heappush(frontier, (0, start))  # (priority, node)
-came_from = {start: None}
-cost_so_far = {start: 0}
+    frontier = []
+    heapq.heappush(frontier, (0, start))  # (priority, node)
+    came_from = {start: None}
+    cost_so_far = {start: 0}
 
-while frontier:
-    _, current = heapq.heappop(frontier)
+    while frontier:
+        _, current = heapq.heappop(frontier)
 
-    if current == goal:
-        break
+        if current == goal:
+            break
 
-    for neighbor, cost in graph[current]:
-        new_cost = cost_so_far[current] + cost
-        if neighbor not in cost_so_far or new_cost < cost_so_far[neighbor]:
-            cost_so_far[neighbor] = new_cost
-            priority = new_cost + heuristic(neighbor, goal)
-            heapq.heappush(frontier, (priority, neighbor))
-            came_from[neighbor] = current
+        for neighbor, cost in graph[current]:
+            new_cost = cost_so_far[current] + cost
+            if neighbor not in cost_so_far or new_cost < cost_so_far[neighbor]:
+                cost_so_far[neighbor] = new_cost
+                priority = new_cost + heuristic(neighbor, goal)
+                heapq.heappush(frontier, (priority, neighbor))
+                came_from[neighbor] = current
 
-return came_from, cost_so_far
+    return came_from, cost_so_far
 
 # Example Heuristic Function (Manhattan Distance)
 def heuristic(node, goal):
-return abs(node[0] - goal[0]) + abs(node[1] - goal[1])
+    return abs(node[0] - goal[0]) + abs(node[1] - goal[1])
 
 # Example Graph Representation
 graph = {
-'A': [('B', 1), ('C', 4)],
-'B': [('A', 1), ('D', 2), ('E', 5)],
-'C': [('A', 4), ('F', 3)],
-'D': [('B', 2)],
-'E': [('B', 5), ('F', 1)],
-'F': [('C', 3), ('E', 1)]
+    'A': [('B', 1), ('C', 4)],
+    'B': [('A', 1), ('D', 2), ('E', 5)],
+    'C': [('A', 4), ('F', 3)],
+    'D': [('B', 2)],
+    'E': [('B', 5), ('F', 1)],
+    'F': [('C', 3), ('E', 1)]
 }
 
 came_from, cost_so_far = a_star_search('A', 'F', graph, heuristic)
 print("Path cost:", cost_so_far['F'])
 `}
-downloadLink="/a1_q456.py"
-codeType="python"
-/>
-
+                downloadLink="/a1_q456.py"
+                codeType="python"
+            />
         </div>
         <Footer />
     </div>
