@@ -54,7 +54,7 @@
             {/if}
             <pre 
                 class="flex-1"
-                style="padding: 1rem;"
+                style="padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;"
             >
                 <code 
                     class={`language-${codeType}`} 
