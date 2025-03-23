@@ -5,6 +5,8 @@
     import "prismjs/components/prism-sql";
     import "prismjs/components/prism-python";
     import "prismjs/themes/prism-tomorrow.css";
+    import "prismjs/components/prism-nasm";
+    import "prismjs/themes/prism-tomorrow.css"; 
 
 
     export let title: string;

@@ -298,7 +298,7 @@ draw_col:
     addi $sp, $sp, 16
     jr $ra`}
     downloadLink="/render.asm"
-    codeType="asm"
+    codeType="nasm"
 />
 </div>
      <Footer />
