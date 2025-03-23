@@ -53,8 +53,8 @@
                     <li>{highlight}</li>
                 {/each}
             </ul>
-            <pre style="overflow-x: auto; font-size: 0.65rem; line-height: 1.2rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a; max-height: 100%;">
-                <code class={`language-${codeType}`} style="font-size: 0.65rem; line-height: 1.2rem;">{codeSnippet}</code>
+            <pre style="overflow-x: auto; font-size: 0.7rem; line-height: 1.2rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a; max-height: 100%;">
+                <code class={`language-${codeType}`} style="font-size: 0.7rem; line-height: 1.2rem;">{codeSnippet}</code>
             </pre>
         </div>
     </div>
