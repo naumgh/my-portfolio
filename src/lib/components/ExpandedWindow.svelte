@@ -48,15 +48,15 @@
 
         <!-- Content -->
         <div class="p-4">
-            <p class="text-secondary mb-4" style="font-size: 0.75rem; line-height: 1rem;">{description}</p>
-            <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.75rem; line-height: 1rem;">
+            <p class="text-secondary mb-4" style="font-size: 0.875rem; line-height: 1.25rem;">{description}</p>
+            <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.875rem; line-height: 1.25rem;">
                 {#each highlights as highlight}
                     <li>{highlight}</li>
                 {/each}
             </ul>
             <pre 
                 class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-                style="font-size: 0.69rem; line-height: .75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;"
+                style="font-size: 0.8125rem; line-height: 1rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;"
             >
                 <code class={`language-${codeType}`}>{codeSnippet}</code>
             </pre>
