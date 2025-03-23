@@ -246,7 +246,7 @@ print("Path cost:", cost_so_far['F'])
 
     <ProjectHeader
     title="Assembly Projects"
-    iconSrc="https://www.svgrepo.com/svg/373445/assembly"
+    iconSrc="https://www.vectorlogo.zone/logos/python/python-icon.svg"
     iconAlt="MIPS Logo"
     titleColor="#FF0000"
     />
