@@ -241,12 +241,12 @@ print("Path cost:", cost_so_far['F'])
                 downloadLink="/a1_q456.py"
                 codeType="python"
             />
-        </div>
+        
 
 
     <ProjectHeader
     title="Assembly Projects"
-    iconSrc="https://www.vectorlogo.zone/logos/mipstechnologies/mipstechnologies-icon.svg"
+    iconSrc="https://worldvectorlogo.com/logo/point-1"
     iconAlt="MIPS Logo"
     titleColor="#FF0000"
     />
@@ -300,7 +300,7 @@ draw_col:
     downloadLink="/render.asm"
     codeType="asm"
 />
-
+</div>
      <Footer />
     </div>
 </main>
