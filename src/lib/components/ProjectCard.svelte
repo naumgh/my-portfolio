@@ -85,22 +85,18 @@
     </div>
 
     <!-- Content -->
-    <div class="p-4">
-        <p class="text-sm text-secondary mb-4">{description}</p>
-        <ul class="text-sm text-secondary list-disc pl-5">
+    <div style="padding: 1rem;">
+        <p style="font-size: 0.75rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
+        <ul style="font-size: 0.75rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem;">
             {#each highlights as highlight}
                 <li>{highlight}</li>
             {/each}
         </ul>
-        <pre 
-        class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-        style="font-size: 0.75rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem;">
-            <code class={`language-${codeType}`} style="font-size: inherit; line-height: inherit;">
+        <pre style="overflow-x: auto; font-size: 0.65rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;">
+            <code class={`language-${codeType}`} style="font-size: 0.65rem; line-height: 1.2rem;">
                 {codeSnippet}
             </code>
         </pre>
-        
-       
     </div>
 </div>
 
