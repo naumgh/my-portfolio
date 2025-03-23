@@ -46,7 +46,6 @@
             </div>
         </div>
 
-        <!-- Content -->
         <div style="padding: 1rem;">
             <p style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
             <ul style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem;">
