@@ -47,18 +47,15 @@
         </div>
 
         <!-- Content -->
-        <div class="p-4">
-            <p class="text-secondary mb-4" style="font-size: 0.875rem; line-height: 1.25rem;">{description}</p>
-            <ul class="text-secondary list-disc pl-5 mb-4" style="font-size: 0.875rem; line-height: 1.25rem;">
+        <div style="padding: 1rem;">
+            <p style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
+            <ul style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem;">
                 {#each highlights as highlight}
                     <li>{highlight}</li>
                 {/each}
             </ul>
-            <pre 
-                class="overflow-x-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded"
-                style="font-size: 0.8125rem; line-height: 1rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; max-height: 100%;"
-            >
-                <code class={`language-${codeType}`}>{codeSnippet}</code>
+            <pre style="overflow-x: auto; font-size: 0.65rem; line-height: 1.2rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a; max-height: 100%;">
+                <code class={`language-${codeType}`} style="font-size: 0.65rem; line-height: 1.2rem;">{codeSnippet}</code>
             </pre>
         </div>
     </div>
