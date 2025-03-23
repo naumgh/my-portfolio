@@ -246,13 +246,13 @@ print("Path cost:", cost_so_far['F'])
 
     <ProjectHeader
     title="Assembly Projects"
-    iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MIPS_Technologies_logo.svg/1200px-MIPS_Technologies_logo.svg.png"
+    iconSrc="https://www.vectorlogo.zone/logos/mipstechnologies/mipstechnologies-icon.svg"
     iconAlt="MIPS Logo"
     titleColor="#FF0000"
     />
 <ProjectCard
     id="bitmap-display"
-    title="Bitmap Display Renderer (MIPS Assembly)"
+    title="Bitmap Display Renderer"
     description="A MIPS assembly function to render a 16x16 byte array as a black-and-white bitmap on a display simulator. Part of a larger Game of Life implementation."
     highlights={[
         "Implemented pixel rendering for a 16x16 grid using MIPS assembly.",
@@ -300,8 +300,6 @@ draw_col:
     downloadLink="/render.asm"
     codeType="asm"
 />
-
-
 
      <Footer />
     </div>
