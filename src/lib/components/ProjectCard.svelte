@@ -85,14 +85,14 @@
     </div>
 
     <div style="padding: 1rem;">
-        <p style="font-size: 0.75rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
-        <ul style="font-size: 0.75rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem;">
+        <p style="font-size: 0.625rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
+        <ul style="font-size: 0.625rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem;">
             {#each highlights as highlight}
                 <li>{highlight}</li>
             {/each}
         </ul>
-        <pre style="overflow-x: auto; font-size: 0.65rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;">
-            <code class={`language-${codeType}`} style="font-size: 0.65rem; line-height: 1.2rem;">
+        <pre style="overflow-x: auto; font-size: 0.5625rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;">
+            <code class={`language-${codeType}`} style="font-size: 0.5625rem; line-height: 1rem;">
                 {codeSnippet}
             </code>
         </pre>
