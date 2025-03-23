@@ -27,6 +27,9 @@
                 <p class="pl-4">│── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a></p>
                 <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
                 <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
+                
+                <p>Assembly Projects/</p>
+                <p class="pl-4">│── <a href="#bitmap-display" class="text-blue-500 hover:underline">Bitmap Display Renderer</a></p>
             </div>
         </nav>
 
@@ -239,6 +242,67 @@ print("Path cost:", cost_so_far['F'])
                 codeType="python"
             />
         </div>
-        <Footer />
+
+
+    <ProjectHeader
+    title="Assembly Projects"
+    iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MIPS_Technologies_logo.svg/1200px-MIPS_Technologies_logo.svg.png"
+    iconAlt="MIPS Logo"
+    titleColor="#FF0000"
+    />
+<ProjectCard
+    id="bitmap-display"
+    title="Bitmap Display Renderer (MIPS Assembly)"
+    description="A MIPS assembly function to render a 16x16 byte array as a black-and-white bitmap on a display simulator. Part of a larger Game of Life implementation."
+    highlights={[
+        "Implemented pixel rendering for a 16x16 grid using MIPS assembly.",
+        "Utilized nested loops for row-major traversal of a byte array.",
+        "Converted binary values (0/1) to pixel colors (black/white).",
+        "Managed stack and registers for function calls in a low-level environment.",
+        "Full file available for download!"
+    ]}
+    codeSnippet={`# draw_16x16:
+# $a0: start address of 16x16 byte array
+# Renders array to bitmap display (0 = black, 1 = white)
+draw_16x16:
+    addi $sp, $sp, -16
+    sw $ra, 0($sp)
+    sw $s0, 4($sp)
+    sw $s1, 8($sp)
+    sw $s2, 12($sp)
+    
+    add $s0, $zero, $a0    # Source array
+    add $s1, $zero, $zero  # Row counter
+draw_row:
+    add $s2, $zero, $zero  # Column counter
+draw_col:
+    add $a0, $zero, $s0
+    add $a1, $zero, $s1
+    add $a2, $zero, $s2
+    jal get_16x16          # Get byte value (0 or 1)
+    
+    add $a0, $zero, $s1    # Row
+    add $a1, $zero, $s2    # Col
+    sub $a2, $zero, $v0    # 0 -> 0x00000000, 1 -> 0xffffffff
+    jal set_pixel          # Draw pixel
+    
+    addi $s2, $s2, 1
+    blt $s2, 16, draw_col
+    addi $s1, $s1, 1
+    blt $s1, 16, draw_row
+    
+    lw $ra, 0($sp)
+    lw $s0, 4($sp)
+    lw $s1, 8($sp)
+    lw $s2, 12($sp)
+    addi $sp, $sp, 16
+    jr $ra`}
+    downloadLink="/render.asm"
+    codeType="asm"
+/>
+
+
+
+     <Footer />
     </div>
 </main>
