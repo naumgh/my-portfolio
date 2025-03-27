@@ -25,9 +25,11 @@
             class="sticky top-0 z-10 bg-surface border-b border-gray-700"
             style="position: -webkit-sticky; position: sticky; left: 0;"
         >
-            <div class="flex items-center justify-between p-2" style="min-width: max-content;">
+            <div class="flex items-center justify-between p-2">
+                <div class="flex flex-col w-full max-w-[calc(100%-5rem)]">
                 <h2 class="text-xs font-bold text-white">{title}</h2>
-                <p style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
+            </div>
+                <p class="text-[0.7rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
                 <button
                     on:click={onClose}
                     class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
