@@ -242,7 +242,12 @@ print("Path cost:", cost_so_far['F'])
                 codeType="python"
             />
         
-
+    <ProjectHeader
+    title="C++ Projects"
+    iconSrc="https://www.vectorlogo.zone/logos/isocpp/isocpp-icon.svg"
+    iconAlt="C++ Logo"
+    titleColor="#306998"
+    />                
 
     <ProjectHeader
     title="MISC Projects"
