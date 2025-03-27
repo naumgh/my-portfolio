@@ -27,6 +27,7 @@
         >
             <div class="flex items-center justify-between p-2" style="min-width: max-content;">
                 <h2 class="text-xs font-bold text-white">{title}</h2>
+                <p style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
                 <button
                     on:click={onClose}
                     class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
@@ -47,7 +48,7 @@
         </div>
 
         <div style="padding: 1rem;">
-            <p style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
+            
             <ul style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem;">
                 {#each highlights as highlight}
                     <li>{highlight}</li>
