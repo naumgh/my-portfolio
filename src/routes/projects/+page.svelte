@@ -45,10 +45,7 @@
             <ProjectCard
                 id="sql-schema"
                 title="Database Schema Design Showcase"
-                description="Designed a relational database schema 
-                to manage campaigns, donations, volunteers, and expenses. 
-                Ensured data integrity using primary and foreign keys, 
-                while optimizing queries for efficient data retrieval."
+                description="Designed a relational database schema to manage campaigns, donations, volunteers, and expenses. Ensured data integrity using primary and foreign keys, while optimizing queries for efficient data retrieval."
                 highlights={[
                     "Designed and normalized a relational database schema (3NF).",
                     "Implemented many-to-many relationships with junction tables.",
