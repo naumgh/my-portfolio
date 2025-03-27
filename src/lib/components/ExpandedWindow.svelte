@@ -28,8 +28,9 @@
             <div class="flex items-center justify-between p-2">
                 <div class="flex flex-col w-full max-w-[calc(100%-5rem)]">
                 <h2 class="text-xs font-bold text-white">{title}</h2>
-            </div>
+            
                 <p class="text-[0.7rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
+            </div>    
                 <button
                     on:click={onClose}
                     class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
