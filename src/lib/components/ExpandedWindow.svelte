@@ -28,8 +28,7 @@
             <div class="flex items-center justify-between p-2">
                 <div class="flex flex-col w-full max-w-[calc(100%-5rem)]">
                 <h2 class="text-xs font-bold text-white">{title}</h2>
-            
-                <p class="text-[0.7rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
+                <p class="text-[0.75rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
             </div>    
                 <button
                     on:click={onClose}
