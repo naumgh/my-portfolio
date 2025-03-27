@@ -40,8 +40,10 @@
         style="position: -webkit-sticky; position: sticky; left: 0;"
     >
         <div class="flex items-center justify-between p-2" style="min-width: max-content;">
-            <h2 class="text-xs font-bold text-primary">{title}</h2>
-            <p style="font-size: 0.625rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
+            <div class="flex flex-col">
+                <h2 class="text-xs font-bold text-primary">{title}</h2>
+                <p class="text-[0.625rem] text-[#a1a1aa] mt-1">{description}</p>
+            </div>
             <div class="flex items-center space-x-2">
                 <a
                     href={downloadLink}
