@@ -41,6 +41,7 @@
     >
         <div class="flex items-center justify-between p-2" style="min-width: max-content;">
             <h2 class="text-xs font-bold text-primary">{title}</h2>
+            <p style="font-size: 0.625rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
             <div class="flex items-center space-x-2">
                 <a
                     href={downloadLink}
@@ -73,7 +74,11 @@
                         stroke-width="2"
                         class="w-6 h-6"
                     >
-                        
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 4h7M4 4v7M20 20h-7M20 20v-7M16 4h4v4M4 16v4h4"
+                        />
                     </svg>
                 </button>
             </div>
@@ -81,14 +86,7 @@
     </div>
 
     <div style="padding: 1rem;">
-        <p style="font-size: 0.625rem; color: #a1a1aa; margin-bottom: 1rem;">{description}</p>
         
-
-        <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 4h7M4 4v7M20 20h-7M20 20v-7M16 4h4v4M4 16v4h4"
-        />
         <ul style="font-size: 0.625rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem;">
             {#each highlights as highlight}
                 <li>{highlight}</li>
