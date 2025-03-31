@@ -253,7 +253,7 @@ print("Path cost:", cost_so_far['F'])
      
     <ProjectHeader
     title="LeetCode Projects"
-    iconSrc="https://github.com/edent/SuperTinyIcons/blob/master/images/svg/leetcode.svg"
+    iconSrc="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/leetcode.svg"
     iconAlt="LeetCode Logo"
     titleColor="#FFA116"
     />  
