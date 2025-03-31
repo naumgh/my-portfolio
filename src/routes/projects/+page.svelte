@@ -18,8 +18,8 @@
     <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
         <!-- Table of Contents -->
         <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-6 py-4 rounded-md shadow-md text-white">
-            <h2 class="text-base sm:text-lg font-semibold mb-2">Table of Contents</h2>
-            <div class="pl-2 text-accent font-mono p-2 rounded-md text-sm sm:text-base">
+            <h2 class="text-sm sm:text-base font-semibold mb-2">Table of Contents</h2>
+            <div class="pl-2 text-accent font-mono p-2 rounded-md text-xs sm:text-sm">
                 <p>SQL Projects/</p>
                 <p class="pl-4">│── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></p>
                 
@@ -35,11 +35,8 @@
                 <p class="pl-4">│── <a href="#leetcode-167" class="text-blue-500 hover:underline">Leetcode #167. Two Sum II - Input Array Is Sorted</a></p>
                 <p class="pl-4">│── <a href="#leetcode-1004" class="text-blue-500 hover:underline">Leetcode #1004. Max Consecutive Ones III</a></p>
                 
-                
                 <p>Assembly Projects/</p>
                 <p class="pl-4">│── <a href="#bitmap-display" class="text-blue-500 hover:underline">Bitmap Display Renderer</a></p>
-
-                
             </div>
         </nav>
 
