@@ -7,7 +7,7 @@
     <!-- Right Side: Navbar Links Section (Including GitHub Icon) -->
     <div class="flex items-center gap-6">
         <!-- Navigation Links -->
-        <a href="/projects" class="text-sm hover:text-accent transition duration-300">Portfolio</a>
+        <a href="/projects" class="text-sm hover:text-accent transition duration-300">Projects</a>
         <a href="/resume" class="text-sm hover:text-accent transition duration-300">Resume</a>
         <a href="/contact" class="text-sm hover:text-accent transition duration-300">Contact</a>
 
