@@ -253,10 +253,40 @@ print("Path cost:", cost_so_far['F'])
      
     <ProjectHeader
     title="LeetCode Projects"
-    iconSrc="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/leetcode.svg"
+    iconSrc="https://upload.wikimedia.org/wikipedia/commons/a/ab/LeetCode_logo_black.svg"
     iconAlt="LeetCode Logo"
     titleColor="#FFA116"
     />  
+
+    <ProjectCard
+    id="leetcode-1"
+    title="Leetcode #1. Two Sum"
+    description="Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice."
+    highlights={[
+        "Example 1: Input: nums = [2,7,11,15], target = 9, Output: [0,1]",
+        "Example 2: Input: nums = [3,2,4], target = 6, Output: [1,2]",
+        "Example 3: Input: nums = [3,3], target = 6, Output: [0,1]",
+        "Constraints: 2 <= nums.length <= 10^4, -10^9 <= nums[i], target <= 10^9.",
+        "Follow-up: Can you come up with an algorithm that is less than O(n^2) time complexity?",
+        "Full solution available below!"
+    ]}
+    codeSnippet={`# Solution in Python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Create a hash map to store the indices of the numbers
+        new_hash = {}
+        for x in range(len(nums)):
+            value = target - nums[x]
+            # Check if the complement exists in the hash map
+            if value in new_hash:
+                return [new_hash[value], x]
+            # Store the current number and its index in the hash map
+            new_hash[nums[x]] = x
+        return None
+`}
+    downloadLink="https://leetcode.com/problems/two-sum/"
+    codeType="python"
+/>
 
     <ProjectCard
     id="leetcode-14"
@@ -287,6 +317,111 @@ class Solution:
         return strs[0][:i]
 `}
     downloadLink="https://leetcode.com/problems/longest-common-prefix/"
+    codeType="python"
+/>
+
+<ProjectCard
+    id="leetcode-35"
+    title="Leetcode #35. Search Insert Position"
+    description="Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity."
+    highlights={[
+        "Example 1: Input: nums = [1,3,5,6], target = 5, Output: 2",
+        "Example 2: Input: nums = [1,3,5,6], target = 2, Output: 1",
+        "Example 3: Input: nums = [1,3,5,6], target = 7, Output: 4",
+        "Constraints: 1 <= nums.length <= 10^4, -10^4 <= nums[i] <= 10^4.",
+        "nums contains distinct values sorted in ascending order.",
+        "Full solution available below!"
+    ]}
+    codeSnippet={`# Solution in Python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        low = 0
+        high = len(nums) - 1
+        while low <= high:
+            mid = low + (high - low) // 2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                low = mid + 1
+            else:
+                high = mid - 1
+        if target < nums[mid]:
+            return mid
+        else:
+            return mid + 1
+`}
+    downloadLink="https://leetcode.com/problems/search-insert-position/"
+    codeType="python"
+/>
+
+<ProjectCard
+    id="leetcode-167"
+    title="Leetcode #167. Two Sum II - Input Array Is Sorted"
+    description="Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Return their indices as an integer array [index1, index2]."
+    highlights={[
+        "Example 1: Input: numbers = [2,7,11,15], target = 9, Output: [1,2]",
+        "Example 2: Input: numbers = [2,3,4], target = 6, Output: [1,3]",
+        "Example 3: Input: numbers = [-1,0], target = -1, Output: [1,2]",
+        "Constraints: 2 <= numbers.length <= 3 * 10^4, -1000 <= numbers[i] <= 1000.",
+        "numbers is sorted in non-decreasing order.",
+        "Your solution must use only constant extra space.",
+        "Full solution available below!"
+    ]}
+    codeSnippet={`# Solution in Python
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        ptr1 = 0
+        ptr2 = len(numbers) - 1
+        while ptr1 < ptr2:
+            if target < numbers[ptr2] + numbers[ptr1]:
+                ptr2 -= 1
+            if numbers[ptr2] + numbers[ptr1] < target:
+                ptr1 += 1
+            if numbers[ptr2] + numbers[ptr1] == target:
+                if ptr1 <= ptr2:
+                    return [ptr1+1, ptr2+1]
+                else:
+                    return [ptr2+1, ptr1+1]
+        return []
+`}
+    downloadLink="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+    codeType="python"
+/>
+
+
+<ProjectCard
+    id="leetcode-1004"
+    title="Leetcode #1004. Max Consecutive Ones III"
+    description="Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's."
+    highlights={[
+        "Example 1: Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2, Output: 6",
+        "Example 2: Input: nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k = 3, Output: 10",
+        "Constraints: 1 <= nums.length <= 10^5, nums[i] is either 0 or 1, 0 <= k <= nums.length.",
+        "Full solution available below!"
+    ]}
+    codeSnippet={`# Solution in Python
+class Solution:
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        max_window = 0
+        num_zeros = 0
+        l = 0
+        
+        for r in range(len(nums)):
+            if nums[r] == 0:
+                num_zeros += 1
+            
+            while num_zeros > k:
+                if nums[l] == 0:
+                    num_zeros -= 1
+                l += 1
+            
+            temp_window = r - l + 1
+            if temp_window > max_window:
+                max_window = temp_window
+        
+        return max_window
+`}
+    downloadLink="https://leetcode.com/problems/max-consecutive-ones-iii/"
     codeType="python"
 />
 
