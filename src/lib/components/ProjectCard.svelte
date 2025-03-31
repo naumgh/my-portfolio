@@ -46,10 +46,13 @@
             </div>
             <div class="flex items-center space-x-2">
                 <a
-                    href={downloadLink}
-                    download
-                    class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
+                    href={downloadLink || '#'}
+                    class={`text-accent flex items-center justify-center w-8 h-8 rounded-full bg-surface transition ${
+                        downloadLink ? 'hover:text-primary hover:bg-gray-700' : 'text-gray-500 cursor-not-allowed'
+                    }`}
                     aria-label="Download file"
+                    { ...(downloadLink ? { download: true } : {}) }
+                    on:click={downloadLink ? null : (e) => e.preventDefault()}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

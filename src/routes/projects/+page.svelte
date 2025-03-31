@@ -253,7 +253,7 @@ print("Path cost:", cost_so_far['F'])
      
     <ProjectHeader
     title="LeetCode Projects"
-    iconSrc="https://upload.wikimedia.org/wikipedia/commons/a/ab/LeetCode_logo_black.svg"
+    iconSrc="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/leetcode.svg"
     iconAlt="LeetCode Logo"
     titleColor="#FFA116"
     />  
@@ -267,8 +267,7 @@ print("Path cost:", cost_so_far['F'])
         "Example 2: Input: nums = [3,2,4], target = 6, Output: [1,2]",
         "Example 3: Input: nums = [3,3], target = 6, Output: [0,1]",
         "Constraints: 2 <= nums.length <= 10^4, -10^9 <= nums[i], target <= 10^9.",
-        "Follow-up: Can you come up with an algorithm that is less than O(n^2) time complexity?",
-        "Full solution available below!"
+        "Full problem description available on <a href='https://leetcode.com/problems/two-sum/' target='_blank' class='text-blue-500 hover:underline'>LeetCode</a>!"
     ]}
     codeSnippet={`# Solution in Python
 class Solution:
@@ -284,7 +283,7 @@ class Solution:
             new_hash[nums[x]] = x
         return None
 `}
-    downloadLink="https://leetcode.com/problems/two-sum/"
+    downloadLink=""
     codeType="python"
 />
 
@@ -296,8 +295,7 @@ class Solution:
         "Example 1: Input: strs = [\"flower\",\"flow\",\"flight\"], Output: \"fl\"",
         "Example 2: Input: strs = [\"dog\",\"racecar\",\"car\"], Output: \"\" (No common prefix).",
         "Constraints: 1 <= strs.length <= 200, 0 <= strs[i].length <= 200.",
-        "Strings consist of only lowercase English letters if non-empty.",
-        "Full solution available below!"
+        "Full problem description available on <a href='https://leetcode.com/problems/longest-common-prefix/' target='_blank' class='text-blue-500 hover:underline'>LeetCode</a>!"
     ]}
     codeSnippet={`# Solution in Python
 class Solution:
@@ -316,7 +314,7 @@ class Solution:
             i += 1
         return strs[0][:i]
 `}
-    downloadLink="https://leetcode.com/problems/longest-common-prefix/"
+    downloadLink=""
     codeType="python"
 />
 
@@ -330,7 +328,7 @@ class Solution:
         "Example 3: Input: nums = [1,3,5,6], target = 7, Output: 4",
         "Constraints: 1 <= nums.length <= 10^4, -10^4 <= nums[i] <= 10^4.",
         "nums contains distinct values sorted in ascending order.",
-        "Full solution available below!"
+        "Full problem description available on <a href='https://leetcode.com/problems/search-insert-position/' target='_blank' class='text-blue-500 hover:underline'>LeetCode</a>!"
     ]}
     codeSnippet={`# Solution in Python
 class Solution:
@@ -350,7 +348,7 @@ class Solution:
         else:
             return mid + 1
 `}
-    downloadLink="https://leetcode.com/problems/search-insert-position/"
+    downloadLink=""
     codeType="python"
 />
 
@@ -365,7 +363,7 @@ class Solution:
         "Constraints: 2 <= numbers.length <= 3 * 10^4, -1000 <= numbers[i] <= 1000.",
         "numbers is sorted in non-decreasing order.",
         "Your solution must use only constant extra space.",
-        "Full solution available below!"
+        "Full problem description available on <a href='https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/' target='_blank' class='text-blue-500 hover:underline'>LeetCode</a>!"
     ]}
     codeSnippet={`# Solution in Python
 class Solution:
@@ -384,7 +382,7 @@ class Solution:
                     return [ptr2+1, ptr1+1]
         return []
 `}
-    downloadLink="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+    downloadLink=""
     codeType="python"
 />
 
@@ -397,7 +395,7 @@ class Solution:
         "Example 1: Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2, Output: 6",
         "Example 2: Input: nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k = 3, Output: 10",
         "Constraints: 1 <= nums.length <= 10^5, nums[i] is either 0 or 1, 0 <= k <= nums.length.",
-        "Full solution available below!"
+        "Full problem description available on <a href='https://leetcode.com/problems/max-consecutive-ones-iii/' target='_blank' class='text-blue-500 hover:underline'>LeetCode</a>!"
     ]}
     codeSnippet={`# Solution in Python
 class Solution:
@@ -421,7 +419,7 @@ class Solution:
         
         return max_window
 `}
-    downloadLink="https://leetcode.com/problems/max-consecutive-ones-iii/"
+    downloadLink=""
     codeType="python"
 />
 
