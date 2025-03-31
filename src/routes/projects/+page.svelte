@@ -28,8 +28,18 @@
                 <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
                 <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
                 
+                <p>LeetCode Projects/</p>
+                <p class="pl-4">│── <a href="#leetcode-1" class="text-blue-500 hover:underline">Leetcode #1. Two Sum</a></p>
+                <p class="pl-4">│── <a href="#leetcode-14" class="text-blue-500 hover:underline">Leetcode #14. Longest Common Prefix</a></p>
+                <p class="pl-4">│── <a href="#leetcode-35" class="text-blue-500 hover:underline">Leetcode #35. Search Insert Position</a></p>
+                <p class="pl-4">│── <a href="#leetcode-167" class="text-blue-500 hover:underline">Leetcode #167. Two Sum II - Input Array Is Sorted</a></p>
+                <p class="pl-4">│── <a href="#leetcode-1004" class="text-blue-500 hover:underline">Leetcode #1004. Max Consecutive Ones III</a></p>
+                
+                
                 <p>Assembly Projects/</p>
                 <p class="pl-4">│── <a href="#bitmap-display" class="text-blue-500 hover:underline">Bitmap Display Renderer</a></p>
+
+                
             </div>
         </nav>
 
