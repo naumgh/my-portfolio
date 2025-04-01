@@ -256,10 +256,38 @@ print("Path cost:", cost_so_far['F'])
     iconAlt="C++ Logo"
     titleColor="#306998"
     />  
-    -->        
+    -->
+
+    <ProjectCard
+    id="smart-client"
+    title="SmartClient: HTTP/HTTPS Connection Checker"
+    description="A Python-based client to analyze HTTP/HTTPS connections, check for HTTP/2 support, and extract cookies from server responses."
+    highlights={[
+        "Implements connection handling for both HTTP (port 80) and HTTPS (port 443).",
+        "Detects HTTP/2 support using ALPN (Application-Layer Protocol Negotiation).",
+        "Parses and extracts cookies from server responses.",
+        "Handles SSL/TLS wrapping for secure connections.",
+        "Includes retry mechanisms and error handling for robust connectivity.",
+        "Full file available for download!"
+    ]}
+    codeSnippet={`# Snippet: Detecting HTTP/2 Support with ALPN
+def upgradeToHttp2(self):
+    context = ssl.create_default_context()
+    context.set_alpn_protocols(['h2', 'spdy/3', 'http/1.1']) 
+    self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    self.s = context.wrap_socket(self.s, server_hostname=self.domain)
+    self.s.connect((self.domain, 443))
+    if self.s.selected_alpn_protocol() == "h2":
+        return True
+    else:
+        return False
+`}
+    downloadLink="/smart_client.py"
+    codeType="python"
+/>
      
     <ProjectHeader
-    title="LeetCode Projects"
+    title="LeetCode Problems"
     iconSrc="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/leetcode.svg"
     iconAlt="LeetCode Logo"
     titleColor="#FFA116"
