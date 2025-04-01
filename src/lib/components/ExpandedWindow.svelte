@@ -11,7 +11,9 @@
     export let codeSnippet: string;
     export let codeType: string;
     export let downloadLink: string;
-    export let onClose: () => void; // Callback to close the expanded window
+    export let onClose: () => void;
+
+    $: safeDownloadLink = downloadLink && downloadLink.startsWith('https://') ? downloadLink : null;
 
     onMount(() => {
         console.log("code highlighting executed");
@@ -20,7 +22,7 @@
 </script>
 
 <div class="fixed inset-0 z-50 bg-opacity-50 flex items-center justify-center">
-    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full max-w-6xl h-[95%] overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
+    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full max-w-6xl h-full max-h-screen overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
         <div
             class="sticky top-0 z-10 bg-surface border-b border-gray-700"
             style="position: -webkit-sticky; position: sticky; left: 0;"
@@ -31,13 +33,13 @@
                     <p class="text-[0.75rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
                 </div>
                 <a
-                    href={downloadLink || '#'}
+                    href={safeDownloadLink || '#'}
                     class={`text-accent flex items-center justify-center w-8 h-8 rounded-full bg-surface transition ${
-                        downloadLink ? 'hover:text-primary hover:bg-gray-700' : 'text-gray-500 cursor-not-allowed'
+                        safeDownloadLink ? 'hover:text-primary hover:bg-gray-700' : 'text-gray-500 cursor-not-allowed'
                     }`}
                     aria-label="Download file"
-                    { ...(downloadLink ? { download: true } : {}) }
-                    on:click={downloadLink ? null : (e) => e.preventDefault()}
+                    { ...(safeDownloadLink ? { download: true } : {}) }
+                    on:click={safeDownloadLink ? null : (e) => e.preventDefault()}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
