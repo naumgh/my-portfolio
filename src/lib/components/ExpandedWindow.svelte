@@ -19,7 +19,7 @@
 </script>
 
 <div class="fixed inset-0 z-50 bg-opacity-50 flex items-center justify-center">
-    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full max-w-4xl h-[90%] overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
+    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full max-w-5xl h-[85%] overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
         <div
             class="sticky top-0 z-10 bg-surface border-b border-gray-700"
             style="position: -webkit-sticky; position: sticky; left: 0;"
