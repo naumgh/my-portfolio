@@ -14,22 +14,21 @@
 
     onMount(() => {
         console.log("code highlighting executed");
-        Prism.highlightAll(); // Apply syntax highlighting
+        Prism.highlightAll(); 
     });
 </script>
 
 <div class="fixed inset-0 z-50 bg-opacity-50 flex items-center justify-center">
-    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full h-full overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
-        <!-- Header -->
+    <div class="relative bg-surface border border-gray-300/20 rounded-lg shadow-lg w-full max-w-4xl h-[90%] overflow-auto scrollbar scrollbar-thin scrollbar-thumb-[#555555] scrollbar-track-[#1a1a1a] scrollbar-thumb-rounded">
         <div
             class="sticky top-0 z-10 bg-surface border-b border-gray-700"
             style="position: -webkit-sticky; position: sticky; left: 0;"
         >
             <div class="flex items-center justify-between p-2">
                 <div class="flex flex-col w-full max-w-[calc(100%-5rem)]">
-                <h2 class="text-xs font-bold text-white">{title}</h2>
-                <p class="text-[0.75rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
-            </div>    
+                    <h2 class="text-xs font-bold text-white">{title}</h2>
+                    <p class="text-[0.75rem] text-[#a1a1aa] mt-1 whitespace-pre-wrap break-words">{description}</p>
+                </div>
                 <button
                     on:click={onClose}
                     class="text-accent hover:text-primary flex items-center justify-center w-8 h-8 rounded-full bg-surface hover:bg-gray-700 transition"
@@ -50,7 +49,6 @@
         </div>
 
         <div style="padding: 1rem;">
-            
             <ul style="font-size: 0.75rem; line-height: 1.25rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem;">
                 {#each highlights as highlight}
                     <li>{highlight}</li>
