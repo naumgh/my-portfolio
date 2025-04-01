@@ -113,6 +113,7 @@
         {highlights}
         {codeSnippet}
         {codeType}
+        {downloadLink}
         onClose={closeExpandedWindow}
     />
 {/if}
