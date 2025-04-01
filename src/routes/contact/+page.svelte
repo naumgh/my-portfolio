@@ -1,27 +1,16 @@
 <script lang="ts">
+
     //@ts-ignore
     import Navbar from "../../lib/components/Navbar.svelte";
 
     let name: string = '';
     let email: string = '';
     let message: string = '';
-    let isSubmitting: boolean = false;
-
-    // LinkedIn link
-    let linkedInLink = "https://www.linkedin.com/in/naum-hoffman/";
-
-    // Validate the LinkedIn link
-    $: safeLinkedInLink = linkedInLink && linkedInLink.startsWith('https://www.linkedin.com/') ? linkedInLink : null;
+    let isSubmitting: boolean = false
 
     async function handleSubmit() {
         try {
-            // Validate the API endpoint
-            const apiEndpoint = '/api/send-email';
-            if (!apiEndpoint.startsWith('/api/')) {
-                throw new Error('Invalid API endpoint');
-            }
-
-            const response = await fetch(apiEndpoint, {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -52,6 +41,7 @@
             isSubmitting = false;
         }, 5000);
     }
+
 </script>
 
 <!-- Nav Bar from homepage-->
@@ -99,6 +89,7 @@
             class="px-8 py-3 bg-accent hover:bg-green-500 rounded-lg text-surface font-semibold transition duration-300 disabled:opacity-50" disabled={isSubmitting}>
             {isSubmitting ? 'Send' : 'Send'}
         </button>
+        
     </form>
 
     <div class="mt-8">
@@ -106,12 +97,9 @@
             Or connect with me on LinkedIn:
         </p>
         <a 
-            href={safeLinkedInLink || '#'} 
+            href="https://www.linkedin.com/in/naum-hoffman/" 
             target="_blank" 
-            class={`px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold transition duration-300 flex items-center justify-center space-x-2 ${
-                safeLinkedInLink ? '' : 'cursor-not-allowed opacity-50'
-            }`}
-            on:click={safeLinkedInLink ? null : (e) => e.preventDefault()}
+            class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold transition duration-300 flex items-center justify-center space-x-2"
         >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -128,3 +116,7 @@
         </a>
     </div>
 </main>
+
+<!--
+<Navbar />
+-->

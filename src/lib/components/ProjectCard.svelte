@@ -8,6 +8,7 @@
     import "prismjs/components/prism-nasm";
     import "prismjs/themes/prism-tomorrow.css"; 
 
+
     export let title: string;
     export let description: string;
     export let highlights: string[];
@@ -17,9 +18,6 @@
     export let id: string;
 
     let isExpanded = false;
-
-    // Validate the download link
-    $: safeDownloadLink = downloadLink && downloadLink.startsWith('https://') ? downloadLink : null;
 
     onMount(() => {
         console.log("code highlighting executed");
@@ -48,13 +46,13 @@
             </div>
             <div class="flex items-center space-x-2">
                 <a
-                    href={safeDownloadLink || '#'}
+                    href={downloadLink || '#'}
                     class={`text-accent flex items-center justify-center w-8 h-8 rounded-full bg-surface transition ${
-                        safeDownloadLink ? 'hover:text-primary hover:bg-gray-700' : 'text-gray-500 cursor-not-allowed'
+                        downloadLink ? 'hover:text-primary hover:bg-gray-700' : 'text-gray-500 cursor-not-allowed'
                     }`}
                     aria-label="Download file"
-                    { ...(safeDownloadLink ? { download: true } : {}) }
-                    on:click={safeDownloadLink ? null : (e) => e.preventDefault()}
+                    { ...(downloadLink ? { download: true } : {}) }
+                    on:click={downloadLink ? null : (e) => e.preventDefault()}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +91,7 @@
     </div>
 
     <div style="padding: 1rem;">
+        
         <ul style="font-size: 0.625rem; color: #a1a1aa; list-style-type: disc; padding-left: 1.25rem;">
             {#each highlights as highlight}
                 <li>{highlight}</li>
