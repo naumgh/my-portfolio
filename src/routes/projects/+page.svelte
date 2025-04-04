@@ -190,6 +190,84 @@ print("Model trained successfully!")`}
                 downloadLink="/medical_costs_post.ipynb"
                 codeType="python"
             />
+
+            <ProjectCard
+    id="linear-regression-scratch"
+    title="Linear Regression from Scratch"
+    description="Implemented a linear regression algorithm from scratch to predict salary based on GPA and years of experience. Compared results with scikit-learn's SGDRegressor and explored polynomial features."
+    highlights={[
+        "Read and preprocessed data from a CSV file (gpa_year_experience.csv).",
+        "Scaled attributes for better convergence during training.",
+        "Computed and visualized the error at each iteration.",
+        "Predicted new instances and compared results with scikit-learn's SGDRegressor.",
+        "Explored polynomial features to improve predictions.",
+        "Full notebook available for download!"
+    ]}
+    codeSnippet={`# Linear Regression Implementation Example
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+data = pd.read_csv('gpa_year_experience.csv')
+
+# Feature scaling
+data['gpa'] = (data['gpa'] - data['gpa'].mean()) / data['gpa'].std()
+data['years_experience'] = (data['years_experience'] - data['years_experience'].mean()) / data['years_experience'].std()
+
+# Initialize weights and bias
+weights = np.random.randn(2)
+bias = 0
+learning_rate = 0.01
+
+# Gradient Descent
+for epoch in range(1000):
+    predictions = np.dot(data[['gpa', 'years_experience']], weights) + bias
+    errors = predictions - data['salary']
+    weights -= learning_rate * np.dot(errors, data[['gpa', 'years_experience']]) / len(data)
+    bias -= learning_rate * errors.mean()
+
+print("Trained weights:", weights)
+print("Trained bias:", bias)
+`}
+    downloadLink="/gpa_years_experience_post.ipynb"
+    codeType="python"
+/>
+<ProjectCard
+    id="penguins-classification"
+    title="Penguin Species Classification"
+    description="Analyzed the Palmer Penguins dataset to classify penguin species based on physical attributes such as culmen length, culmen depth, flipper length, and body mass. Demonstrated data cleaning, exploration, and visualization techniques."
+    highlights={[
+        "Explored the Palmer Penguins dataset with 344 samples across three species.",
+        "Performed data cleaning and preprocessing to handle missing values.",
+        "Visualized relationships between features using scatter plots and histograms.",
+        "Built classification models to predict penguin species based on physical attributes.",
+        "Compared model performance using metrics like accuracy and confusion matrices.",
+        "Full notebook available for download!"
+    ]}
+    codeSnippet={`# Example: Visualizing the Palmer Penguins Dataset
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataset
+penguins = pd.read_csv('penguins.csv')
+
+# Pairplot to visualize relationships between features
+sns.pairplot(penguins, hue='species', diag_kind='kde')
+plt.show()
+
+# Correlation heatmap
+plt.figure(figsize=(10, 6))
+sns.heatmap(penguins.corr(), annot=True, cmap='coolwarm')
+plt.title('Feature Correlation Heatmap')
+plt.show()
+`}
+    downloadLink="/penguins_post.ipynb"
+    codeType="python"
+/>
             <ProjectCard
                 id="search-algorithms"
                 title="Search Algorithms Implementation"
