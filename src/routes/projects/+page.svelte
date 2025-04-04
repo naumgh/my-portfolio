@@ -26,6 +26,8 @@
                 <p>Python Projects/</p>
                 <p class="pl-4">│── <a href="#db-management" class="text-blue-500 hover:underline">Database Management System</a></p>
                 <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
+                <p class="pl-4">│── <a href="#linear-regression-scratch" class="text-blue-500 hover:underline">gpa_year_experience</a></p>
+                <p class="pl-4">│── <a href="#penguins-classification" class="text-blue-500 hover:underline">Penguin Species Classification</a></p>
                 <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
                 <p class="pl-4">│── <a href="#smart-client" class="text-blue-500 hover:underline">HTTP/HTTPS SmartClient Implementation</a></p>
                 <p>LeetCode Projects/</p>
@@ -193,7 +195,7 @@ print("Model trained successfully!")`}
 
             <ProjectCard
     id="linear-regression-scratch"
-    title="Linear Regression from Scratch"
+    title="gpa_year_experience"
     description="Implemented a linear regression algorithm from scratch to predict salary based on GPA and years of experience. Compared results with scikit-learn's SGDRegressor and explored polynomial features."
     highlights={[
         "Read and preprocessed data from a CSV file (gpa_year_experience.csv).",
