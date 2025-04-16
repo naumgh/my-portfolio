@@ -30,7 +30,7 @@
                 <p class="pl-4">│── <a href="#penguins-classification" class="text-blue-500 hover:underline">Penguin Species Classification</a></p>
                 <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
                 <p class="pl-4">│── <a href="#smart-client" class="text-blue-500 hover:underline">HTTP/HTTPS SmartClient Implementation</a></p>
-                <p>LeetCode Projects/</p>
+                <p>LeetCode Problems/</p>
                 <p class="pl-4">│── <a href="#leetcode-1" class="text-blue-500 hover:underline">Leetcode #1. Two Sum</a></p>
                 <p class="pl-4">│── <a href="#leetcode-14" class="text-blue-500 hover:underline">Leetcode #14. Longest Common Prefix</a></p>
                 <p class="pl-4">│── <a href="#leetcode-35" class="text-blue-500 hover:underline">Leetcode #35. Search Insert Position</a></p>

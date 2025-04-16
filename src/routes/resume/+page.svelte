@@ -89,7 +89,7 @@
                 <img src="https://www.svgrepo.com/download/314005/free-code-camp.svg" alt="FreeCodeCamp Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
                 <div>
                     <p class="font-semibold text-primary text-xs sm:text-sm">FreeCodeCamp</p>
-                    <p class="text-secondary text-[11px] sm:text-xs">Data Analyst Certification</p>
+                    <p class="text-secondary text-[11px] sm:text-xs">Data Analysis with Python</p>
                     <p class="text-secondary text-[11px] sm:text-xs">April 2025</p>
                 </div>
             </div>
