@@ -414,7 +414,7 @@ def draw_heat_map():
     return fig`}
     downloadLink=""
     codeType="python"
-    visualization={["/catplot.png", "/heatmap.png"]}
+    visualization={["/catplot_medical.png", "/heatmap_medical.png"]}
 />
 
 <ProjectCard
