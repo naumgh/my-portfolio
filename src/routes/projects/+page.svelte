@@ -369,7 +369,9 @@ fig.savefig('line_plot.png')
         "Cleaned data by removing outliers and invalid entries.",
         "Full script available for download!"
     ]}
-    codeSnippet={`import pandas as pd
+    codeSnippet={`
+    
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
