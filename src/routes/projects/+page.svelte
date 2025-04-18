@@ -28,8 +28,13 @@
                 <p class="pl-4">│── <a href="#ml-project" class="text-blue-500 hover:underline">Medical Insurance Cost Prediction</a></p>
                 <p class="pl-4">│── <a href="#linear-regression-scratch" class="text-blue-500 hover:underline">gpa_year_experience</a></p>
                 <p class="pl-4">│── <a href="#penguins-classification" class="text-blue-500 hover:underline">Penguin Species Classification</a></p>
+                <p class="pl-4">│── <a href="#sea-level-predictor" class="text-blue-500 hover:underline">Sea Level Predictor</a></p>
+                <p class="pl-4">│── <a href="#time-series-visualizer" class="text-blue-500 hover:underline">Time Series Visualizer</a></p>
+                <p class="pl-4">│── <a href="#medical-data-visualizer" class="text-blue-500 hover:underline">Medical Data Visualizer</a></p>
+                <p class="pl-4">│── <a href="#mean-variance-calculator" class="text-blue-500 hover:underline">Mean-Variance-Standard Deviation Calculator</a></p>
                 <p class="pl-4">│── <a href="#search-algorithms" class="text-blue-500 hover:underline">Search Algorithms Implementation</a></p>
                 <p class="pl-4">│── <a href="#smart-client" class="text-blue-500 hover:underline">HTTP/HTTPS SmartClient Implementation</a></p>
+                
                 <p>LeetCode Problems/</p>
                 <p class="pl-4">│── <a href="#leetcode-1" class="text-blue-500 hover:underline">Leetcode #1. Two Sum</a></p>
                 <p class="pl-4">│── <a href="#leetcode-14" class="text-blue-500 hover:underline">Leetcode #14. Longest Common Prefix</a></p>
@@ -268,6 +273,136 @@ plt.title('Feature Correlation Heatmap')
 plt.show()
 `}
     downloadLink="/penguins_post.ipynb"
+    codeType="python"
+/>
+<ProjectCard
+    id="sea-level-predictor"
+    title="Sea Level Predictor"
+    description="Analyzed historical sea level data to predict future trends using linear regression. Visualized the data and predictions with Matplotlib."
+    highlights={[
+        "Loaded and visualized historical sea level data from 1880 to 2013.",
+        "Implemented linear regression to predict sea levels up to 2050.",
+        "Created two lines of best fit: one for all data and one for data since 2000.",
+        "Visualized predictions with scatter plots and regression lines.",
+        "Full script available for download!"
+    ]}
+    codeSnippet={`# Example: Linear Regression for Sea Level Prediction
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
+
+# Load data
+df = pd.read_csv("epa-sea-level.csv")
+
+# Perform linear regression
+slope, intercept, _, _, _ = linregress(df["Year"], df["CSIRO Adjusted Sea Level"])
+x_vals = pd.Series(range(df['Year'].min(), 2051))
+y_vals = slope * x_vals + intercept
+
+# Plot data and regression line
+plt.scatter(df["Year"], df["CSIRO Adjusted Sea Level"], alpha=0.5)
+plt.plot(x_vals, y_vals, 'r', label='Best Fit (1880-2050)')
+plt.xlabel("Year")
+plt.ylabel("Sea Level (inches)")
+plt.title("Rise in Sea Level")
+plt.legend()
+plt.show()
+`}
+    downloadLink="/Sea_Level_Predictor.py"
+    codeType="python"
+/>
+
+<ProjectCard
+    id="time-series-visualizer"
+    title="Time Series Visualizer"
+    description="Visualized time series data of freeCodeCamp forum page views using line plots, bar plots, and box plots."
+    highlights={[
+        "Cleaned and filtered data to remove outliers.",
+        "Created a line plot to show daily page views over time.",
+        "Generated a bar plot to display monthly averages grouped by year.",
+        "Designed box plots to visualize yearly and monthly distributions.",
+        "Full script available for download!"
+    ]}
+    codeSnippet={`# Example: Line Plot for Time Series Data
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load and clean data
+df = pd.read_csv("fcc-forum-pageviews.csv", parse_dates=["date"], index_col="date")
+df = df[(df['value'] > df['value'].quantile(0.025)) & (df['value'] < df['value'].quantile(0.975))]
+
+# Plot line graph
+fig = df.plot(figsize=(12, 6), kind='line', title='Daily Page Views', ylabel='Page Views', xlabel='Date').get_figure()
+fig.savefig('line_plot.png')
+`}
+    downloadLink="/time_series_visualizer.py"
+    codeType="python"
+    visualization="/line_plot.png"
+/>
+
+<ProjectCard
+    id="medical-data-visualizer"
+    title="Medical Data Visualizer"
+    description="Analyzed and visualized medical data to explore relationships between health metrics and cardiovascular disease."
+    highlights={[
+        "Calculated BMI to classify individuals as overweight.",
+        "Created categorical plots to compare health metrics by cardiovascular disease status.",
+        "Generated a heatmap to visualize correlations between health metrics.",
+        "Cleaned data by removing outliers and invalid entries.",
+        "Full script available for download!"
+    ]}
+    codeSnippet={`# Example: Heatmap for Medical Data Correlation
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load and clean data
+df = pd.read_csv("medical_examination.csv")
+df['overweight'] = (df['weight'] / (df['height'] / 100) ** 2 > 25).astype(int)
+df = df[(df['ap_lo'] <= df['ap_hi'])]
+
+# Generate heatmap
+corr = df.corr()
+sns.heatmap(corr, annot=True, fmt=".1f")
+plt.title("Correlation Heatmap")
+plt.show()
+`}
+    downloadLink="/Medical_Data_Visualizer.py"
+    codeType="python"
+    visualization="/images/medical_heatmap.png"
+/>
+
+<ProjectCard
+    id="mean-variance-calculator"
+    title="Mean-Variance-Standard Deviation Calculator"
+    description="Performed statistical analysis on demographic data to calculate key metrics such as mean, variance, and standard deviation."
+    highlights={[
+        "Calculated race representation and average age of men.",
+        "Determined percentages of individuals with advanced education earning >50K.",
+        "Analyzed work hours and income distribution by country.",
+        "Identified the most popular occupation for high earners in India.",
+        "Full script available for download!"
+    ]}
+    codeSnippet={`# Example: Calculating Demographic Statistics
+
+import pandas as pd
+
+# Load data
+df = pd.read_csv("adult.data.csv")
+
+# Calculate statistics
+race_count = df['race'].value_counts()
+average_age_men = round(df[df['sex'] == 'Male']['age'].mean(), 1)
+percentage_bachelors = round((df['education'].value_counts()['Bachelors'] / len(df)) * 100, 1)
+
+print("Race Count:", race_count)
+print("Average Age of Men:", average_age_men)
+print("Percentage with Bachelors:", percentage_bachelors)
+`}
+    downloadLink="/Mean-Variance-Standard_Deviation_Calculator.py"
     codeType="python"
 />
             <ProjectCard

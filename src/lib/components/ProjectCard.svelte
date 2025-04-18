@@ -16,6 +16,7 @@
     export let downloadLink: string;
     export let codeType: string;
     export let id: string;
+    export let visualization: string | null = null;
 
     let isExpanded = false;
 
