@@ -284,7 +284,6 @@ plt.show()
         "Implemented linear regression to predict sea levels up to 2050.",
         "Created two lines of best fit: one for all data and one for data since 2000.",
         "Visualized predictions with scatter plots and regression lines.",
-        "Full script available for download!"
     ]}
     codeSnippet={`# Example: Linear Regression for Sea Level Prediction
 
@@ -341,7 +340,6 @@ def draw_plot():
         "Created a line plot to show daily page views over time.",
         "Generated a bar plot to display monthly averages grouped by year.",
         "Designed box plots to visualize yearly and monthly distributions.",
-        "Full script available for download!"
     ]}
     codeSnippet={`# Example: Line Plot for Time Series Data
 
@@ -369,7 +367,6 @@ fig.savefig('line_plot.png')
         "Created categorical plots to compare health metrics by cardiovascular disease status.",
         "Generated a heatmap to visualize correlations between health metrics.",
         "Cleaned data by removing outliers and invalid entries.",
-        "Full script available for download!"
     ]}
     codeSnippet={`# Example: Heatmap for Medical Data Correlation
 
@@ -401,7 +398,6 @@ plt.show()
         "Determined percentages of individuals with advanced education earning >50K.",
         "Analyzed work hours and income distribution by country.",
         "Identified the most popular occupation for high earners in India.",
-        "Full script available for download!"
     ]}
     codeSnippet={`# Example: Calculating Demographic Statistics
 
