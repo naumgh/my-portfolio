@@ -108,7 +108,7 @@
                                 src={image} 
                                 alt="{title} Visualization {index + 1}" 
                                 class="rounded-md shadow-md" 
-                                style="max-width: 100%; height: auto; object-fit: contain; max-height: 400px;" 
+                                style="max-width: 100%; height: auto; object-fit: contain; max-height: 300px;" 
                             />
                         </div>
                     {/each}
