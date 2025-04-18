@@ -91,7 +91,6 @@
                                     class="rounded-md shadow-md" 
                                     style="max-width: 100%; height: auto; object-fit: contain; max-height: 400px;" 
                                 />
-                                <p class="text-xs text-center mt-2">Visualization {index + 1}</p>
                             </div>
                         {/each}
                     </div>
