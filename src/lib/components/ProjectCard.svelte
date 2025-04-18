@@ -111,7 +111,7 @@
                     src={visualization} 
                     alt="{title} Visualization" 
                     class="rounded-md shadow-md" 
-                    style="max-width: 300px; max-height: 200px; width: 100%; height: auto;" 
+                    style="max-width: 100%; height: auto; object-fit: contain; max-height: 150px;" 
                 />
             </div>
         {/if}
