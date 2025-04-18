@@ -103,6 +103,13 @@
                 {codeSnippet}
             </code>
         </pre>
+        <!-- Visualization Section -->
+        {#if visualization}
+            <div class="mt-4">
+                <h4 class="text-sm font-semibold text-primary">Visualization</h4>
+                <img src={visualization} alt="{title} Visualization" class="rounded-md shadow-md" />
+            </div>
+        {/if}
     </div>
 </div>
 
