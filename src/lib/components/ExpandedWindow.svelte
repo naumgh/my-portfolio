@@ -11,6 +11,8 @@
     export let codeSnippet: string;
     export let codeType: string;
     export let downloadLink: string;
+    export let id: string;
+    export let visualization: string | null = null; // Optional visualization property
     export let onClose: () => void; // Callback to close the expanded window
 
     onMount(() => {
@@ -76,6 +78,18 @@
                     <li>{highlight}</li>
                 {/each}
             </ul>
+
+            {#if visualization}
+                <div class="mt-4">
+                    <h4 class="text-sm font-semibold text-primary">Visualization</h4>
+                    <img 
+                        src={visualization} 
+                        alt="{title} Visualization" 
+                        class="rounded-md shadow-md" 
+                        style="max-width: 100%; height: auto; object-fit: contain; max-height: 300px;" 
+                    />
+                </div>
+            {/if}
             <pre style="overflow-x: auto; font-size: 0.7rem; line-height: 1.2rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a; max-height: 100%;">
                 <code class={`language-${codeType}`} style="font-size: 0.7rem; line-height: 1.2rem;">{codeSnippet}</code>
             </pre>

@@ -106,7 +106,7 @@
         <!-- Visualization Section -->
         {#if visualization}
             <div class="mt-4">
-                <h4 class="text-sm font-semibold text-primary">Visualization</h4>
+                <h4 class="text-sm font-semibold text-primary">Visualization(s)</h4>
                 <img 
                     src={visualization} 
                     alt="{title} Visualization" 
@@ -122,11 +122,13 @@
 {#if isExpanded}
     <ExpandedWindow
         {title}
+        {id}
         {description}
         {highlights}
         {codeSnippet}
         {codeType}
         {downloadLink}
+        {visualization}
         onClose={closeExpandedWindow}
     />
 {/if}
