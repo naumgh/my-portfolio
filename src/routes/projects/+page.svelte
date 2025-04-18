@@ -370,7 +370,6 @@ fig.savefig('line_plot.png')
         "Full script available for download!"
     ]}
     codeSnippet={`
-    
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

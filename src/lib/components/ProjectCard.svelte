@@ -99,23 +99,23 @@
             {/each}
         </ul>
         {#if visualization && visualization.length > 0}
-                <div class="mt-4">
-                    <h4 class="text-sm font-semibold text-primary">Visualization(s)</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {#each visualization as image, index}
-                            <div>
-                                <img 
-                                    src={image} 
-                                    alt="{title} Visualization {index + 1}" 
-                                    class="rounded-md shadow-md" 
-                                    style="max-width: 100%; height: auto; object-fit: contain; max-height: 300px;" 
-                                />
-                                <p class="text-xs text-center mt-2">Visualization {index + 1}</p>
-                            </div>
-                        {/each}
-                    </div>
+            <div class="mt-4">
+                <h4 class="text-sm font-semibold text-primary">Visualization(s)</h4>
+                <div class="flex flex-col gap-6">
+                    {#each visualization as image, index}
+                        <div>
+                            <img 
+                                src={image} 
+                                alt="{title} Visualization {index + 1}" 
+                                class="rounded-md shadow-md" 
+                                style="max-width: 100%; height: auto; object-fit: contain; max-height: 400px;" 
+                            />
+                            <p class="text-xs text-center mt-2">Visualization {index + 1}</p>
+                        </div>
+                    {/each}
                 </div>
-            {/if}
+            </div>
+        {/if}
         <pre style="overflow-x: auto; font-size: 0.5625rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;">
             <code class={`language-${codeType}`} style="font-size: 0.5625rem; line-height: 1rem;">
                 {codeSnippet}
