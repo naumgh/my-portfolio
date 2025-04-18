@@ -311,6 +311,8 @@ plt.show()
 `}
     downloadLink="/Sea_Level_Predictor.py"
     codeType="python"
+    visualization = "/sea_level_plot.png"
+        
 />
 
 <ProjectCard
@@ -339,7 +341,6 @@ fig.savefig('line_plot.png')
 `}
     downloadLink="/time_series_visualizer.py"
     codeType="python"
-    visualization="/line_plot.png"
 />
 
 <ProjectCard
@@ -372,7 +373,6 @@ plt.show()
 `}
     downloadLink="/Medical_Data_Visualizer.py"
     codeType="python"
-    visualization="/images/medical_heatmap.png"
 />
 
 <ProjectCard

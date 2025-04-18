@@ -98,12 +98,6 @@
                 <li>{highlight}</li>
             {/each}
         </ul>
-        <pre style="overflow-x: auto; font-size: 0.5625rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;">
-            <code class={`language-${codeType}`} style="font-size: 0.5625rem; line-height: 1rem;">
-                {codeSnippet}
-            </code>
-        </pre>
-        <!-- Visualization Section -->
         {#if visualization}
             <div class="mt-4">
                 <h4 class="text-sm font-semibold text-primary">Visualization(s)</h4>
@@ -115,6 +109,11 @@
                 />
             </div>
         {/if}
+        <pre style="overflow-x: auto; font-size: 0.5625rem; padding: 1rem; background-color: transparent; color: #ffffff; border-radius: 0.375rem; scrollbar-width: thin; scrollbar-color: #555555 #1a1a1a;">
+            <code class={`language-${codeType}`} style="font-size: 0.5625rem; line-height: 1rem;">
+                {codeSnippet}
+            </code>
+        </pre> 
     </div>
 </div>
 
