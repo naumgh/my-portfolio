@@ -107,7 +107,12 @@
         {#if visualization}
             <div class="mt-4">
                 <h4 class="text-sm font-semibold text-primary">Visualization</h4>
-                <img src={visualization} alt="{title} Visualization" class="rounded-md shadow-md" />
+                <img 
+                    src={visualization} 
+                    alt="{title} Visualization" 
+                    class="rounded-md shadow-md" 
+                    style="max-width: 300px; max-height: 200px; width: 100%; height: auto;" 
+                />
             </div>
         {/if}
     </div>
