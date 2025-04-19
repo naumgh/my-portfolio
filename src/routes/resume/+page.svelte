@@ -49,6 +49,12 @@
                 <p class="text-secondary text-[11px] sm:text-xs">Bachelor of Science in Computer Science</p>
                 <p class="text-secondary text-[11px] sm:text-xs">December 2024</p>
             </div>
+            <img src="/uvic.png" alt="University Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
+            <div>
+                <p class="font-semibold text-primary text-xs sm:text-sm">University of Victoria</p>
+                <p class="text-secondary text-[11px] sm:text-xs">Bachelor of Science in Computer Science</p>
+                <p class="text-secondary text-[11px] sm:text-xs">December 2024</p>
+            </div>
         </div>
 
         <!-- Circle around Professional Experience -->
