@@ -55,7 +55,7 @@
         <div class="h-20 flex items-center justify-center w-full">
             <span class="text-xs sm:text-sm font-bold">PROFESSIONAL EXPERIENCE</span>
         </div>
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-3">
             <div class="flex items-start space-x-2">
                 <img src="/Pamway.png" alt="Pamway Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
                 <div>
