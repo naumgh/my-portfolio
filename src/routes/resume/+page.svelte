@@ -93,6 +93,14 @@
                     <p class="text-secondary text-[11px] sm:text-xs">April 2025</p>
                 </div>
             </div>
+            <div class="flex items-start space-x-2">
+                <img src="/isource.png" alt="iSource Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
+                <div>
+                    <p class="font-semibold text-primary text-xs sm:text-sm">iSource</p>
+                    <p class="text-secondary text-[11px] sm:text-xs">Programming in HTML5 with JavaScript and CSS3</p>
+                    <p class="text-secondary text-[11px] sm:text-xs">Aug 2022</p>
+                </div>
+            </div>
         </div>
 
         <!-- Circle around Skills & Tools -->
