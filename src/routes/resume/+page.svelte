@@ -49,19 +49,13 @@
                 <p class="text-secondary text-[11px] sm:text-xs">Bachelor of Science in Computer Science</p>
                 <p class="text-secondary text-[11px] sm:text-xs">December 2024</p>
             </div>
-            <img src="/uvic.png" alt="University Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
-            <div>
-                <p class="font-semibold text-primary text-xs sm:text-sm">University of Victoria</p>
-                <p class="text-secondary text-[11px] sm:text-xs">Bachelor of Science in Computer Science</p>
-                <p class="text-secondary text-[11px] sm:text-xs">December 2024</p>
-            </div>
         </div>
 
         <!-- Circle around Professional Experience -->
         <div class="h-20 flex items-center justify-center w-full">
             <span class="text-xs sm:text-sm font-bold">PROFESSIONAL EXPERIENCE</span>
         </div>
-        <div class="flex flex-col space-y-5">
+        <div class="flex flex-col space-y-4 mb-6">
             <div class="flex items-start space-x-2">
                 <img src="/Pamway.png" alt="Pamway Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
                 <div>
