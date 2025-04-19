@@ -84,7 +84,7 @@
         <div class="h-20 flex items-center justify-center w-full">
             <span class="text-xs sm:text-sm font-bold">CERTIFICATIONS</span>
         </div>
-        <div class="flex flex-col space-y-5">
+        <div class="flex flex-col space-y-3">
             <div class="flex items-start space-x-2">
                 <img src="https://www.svgrepo.com/download/314005/free-code-camp.svg" alt="FreeCodeCamp Logo" style="width: 40px; height: auto;" class="sm:w-[50px]" />
                 <div>
