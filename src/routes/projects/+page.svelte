@@ -412,7 +412,7 @@ def draw_box_plot():
 `}
     downloadLink="/time_series_visualizer.py"
     codeType="python"
-    visualization={["/line_plot.png", "/bar_plot.png", "/box_plot.png"]}
+    visualization={["/line_plot_timeseries.png", "/bar_plot_timeseries.png", "/box_plot_timeseries.png"]}
 />
 
 <ProjectCard
