@@ -29,8 +29,8 @@
             <p class="text-xs sm:text-sm text-secondary">
                 Want to see my full resume? 
                 <a
-                    href="/Naum-Hoffman-Resume-2024s.pdf"
-                    download="Naum-Resume-0225.pdf"
+                    href="/Naum_Hoffman_Resume.pdf"
+                    download="Naum_Hoffman_Resume.pdf"
                     class="text-accent underline hover:text-primary transition"
                 >
                     Download it here.
