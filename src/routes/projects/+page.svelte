@@ -65,7 +65,7 @@
                     "Implemented many-to-many relationships with junction tables.",
                     "Enforced referential integrity with foreign keys.",
                     "Created complex queries for data aggregation and retrieval.",
-                    "Full file(s) available for download!"
+                    "Full file(s) available for download on Github!"
                 ]}   
                 codeSnippet={`--Some table Definition Examples
 
@@ -111,7 +111,7 @@ INSERT INTO VOLUNTEER VALUES (927505, 'Clack Clarkson', 'clack@gmail.com',2, NUL
 INSERT INTO VOLUNTEER VALUES (927506, 'Black White', 'black@gmail.com',1,NULL );
 INSERT INTO VOLUNTEER VALUES (927507, 'Ivan Naskov', 'ots@gmail.com',2, NULL);
 INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL);`}
-                downloadLink="/gng-construct.sql"
+                downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/csc370-Database-Systems/coursework/gng-construct.sql"
                 codeType="sql"
             />
             <ProjectHeader
@@ -131,7 +131,7 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
                     "Created ASCII-based visualizations for financial insights (inflows, outflows, budgets).",
                     "Handled complex SQL queries with Common Table Expressions (CTEs) for data aggregation.",
                     "Incorporated input validation and transaction rollbacks for error handling and data integrity.",
-                    "Full file(s) available for download!"
+                    "Full file(s) available for download on Github!"
                 ]}
                 codeSnippet={`# Sample Code: Insert Donations with ON CONFLICT Handling
   
@@ -150,7 +150,7 @@ def insertIntoDonatesTable(self):
     except psycopg2.Error as e:
         dbconn.rollback()
         print("Error inserting into DONATES table:", e)`}
-                downloadLink="/gng.py"
+                downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/csc370-Database-Systems/coursework/gng.py"
                 codeType="python"
             />
             <ProjectCard
@@ -164,7 +164,7 @@ def insertIntoDonatesTable(self):
                     "Applied log transformation to normalize skewed distributions.",
                     "Engineered features based on regional, lifestyle, and demographic factors.",
                     "Integrated cross-validation to improve model generalization.",
-                    "Full file(s) available for download!"
+                    "Full file(s) available for download on Github!"
                 ]}
                 codeSnippet={`# Scikit-Learn Preprocessing Pipeline for Insurance Cost Prediction
 
@@ -194,7 +194,7 @@ model_pipeline = make_pipeline(preprocessing, LinearRegression())
 # Train the model
 model_pipeline.fit(train_set.drop("charges", axis=1), train_set["charges"])
 print("Model trained successfully!")`}
-                downloadLink="/medical_costs_post.ipynb"
+                downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/seng474-Data-Mining/assign1/medical_costs_post.ipynb"
                 codeType="python"
             />
 
@@ -238,7 +238,7 @@ for epoch in range(1000):
 print("Trained weights:", weights)
 print("Trained bias:", bias)
 `}
-    downloadLink="/gpa_years_experience_post.ipynb"
+    downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/seng474-Data-Mining/assign1/gpa_years_experience_post.pdf"
     codeType="python"
 />
 <ProjectCard
@@ -272,7 +272,7 @@ sns.heatmap(penguins.corr(), annot=True, cmap='coolwarm')
 plt.title('Feature Correlation Heatmap')
 plt.show()
 `}
-    downloadLink="/penguins_post.ipynb"
+    downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/seng474-Data-Mining/assign1/penguins_post.ipynb"
     codeType="python"
 />
 <ProjectCard
@@ -325,7 +325,7 @@ def draw_plot():
     plt.savefig('sea_level_plot.png')
     return plt.gca()
 `}
-    downloadLink=""
+    downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/MISC/FreeCodeCampPython/Sea_Level_Predictor.py"
     codeType="python"
     visualization ={["/sea_level_plot.png"]}
         
@@ -410,7 +410,7 @@ def draw_box_plot():
     fig.savefig('box_plot.png')
     return fig
 `}
-    downloadLink="/time_series_visualizer.py"
+    downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/MISC/FreeCodeCampPython/time_series_visualizer.py"
     codeType="python"
     visualization={["/line_plot_timeseries.png", "/bar_plot_timeseries.png", "/box_plot_timeseries.png"]}
 />
@@ -470,7 +470,7 @@ def draw_heat_map():
     sns.heatmap(corr, mask=mask, annot=True, fmt=".1f", ax=ax)
     fig.savefig('heatmap.png')
     return fig`}
-    downloadLink=""
+    downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/MISC/FreeCodeCampPython/Medical_Data_Visualizer.py"
     codeType="python"
     visualization={["/catplot_medical.png", "/heatmap_medical.png"]}
 />
@@ -514,7 +514,7 @@ print("Percentage with Bachelors:", percentage_bachelors)
                     "Utilized priority queues for efficient frontier management.",
                     "Implemented graph traversal with state expansion and cost tracking.",
                     "Applied search algorithms to AI-related pathfinding problems.",
-                    "Full file(s) available for download!"
+                    "Full file(s) available for download on Github!"
                 ]}
                 codeSnippet={`# A* Search Algorithm Implementation
 
@@ -559,7 +559,7 @@ graph = {
 came_from, cost_so_far = a_star_search('A', 'F', graph, heuristic)
 print("Path cost:", cost_so_far['F'])
 `}
-                downloadLink="/a1_q456.py"
+                downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/MISC/a1_q456.py"
                 codeType="python"
             />
    
@@ -582,7 +582,7 @@ print("Path cost:", cost_so_far['F'])
         "Parses and extracts cookies from server responses.",
         "Handles SSL/TLS wrapping for secure connections.",
         "Includes retry mechanisms and error handling for robust connectivity.",
-        "Full file available for download!"
+        "Full file available for download on Github!"
     ]}
     codeSnippet={`# Snippet: Detecting HTTP/2 Support with ALPN
 def upgradeToHttp2(self):
@@ -596,7 +596,7 @@ def upgradeToHttp2(self):
     else:
         return False
 `}
-    downloadLink="/smart_client.py"
+    downloadLink="https://github.com/naumgh/projectsAndSchool/tree/main/csc361-Networks/SmartClient"
     codeType="python"
 />
      
@@ -787,7 +787,7 @@ class Solution:
         "Utilized nested loops for row-major traversal of a byte array.",
         "Converted binary values (0/1) to pixel colors (black/white).",
         "Managed stack and registers for function calls in a low-level environment.",
-        "Full file available for download!"
+        "Full file available for download on Github!"
     ]}
     codeSnippet={`# draw_16x16:
 # $a0: start address of 16x16 byte array
@@ -825,7 +825,7 @@ draw_col:
     lw $s2, 12($sp)
     addi $sp, $sp, 16
     jr $ra`}
-    downloadLink="/render.asm"
+    downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/csc230-Computer-Architecture/assignments/a4/display.asm"
     codeType="nasm"
 />
 </div>
