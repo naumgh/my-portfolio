@@ -22,17 +22,16 @@ name can now be set from ouside the component, by a parent component
   let jobTitle = ""; // this will be set via fetch
 
   fetch("https://api.github.com/users/naumgh")
-    .then((res) => res.json())
-    .then((data) => {
-      // set the GitHub profile picture
-      const profilePic = document.getElementById("github-profile-pic");
-      if (profilePic) {
-        profilePic.src = data.avatar_url;
-      }
+  .then((res) => res.json())
+  .then((data) => {
+    const profilePic = document.getElementById("github-profile-pic");
+    if (profilePic) {
+      profilePic.src = data.avatar_url;
 
-      // set the jobTitle (reactively displayed in UI)
-      jobTitle = data.bio || "Software Engineer / Data Analyst";
-    });
+      // trigger shimmer-on-load manually by adding class
+      profilePic.parentElement?.classList.add("loaded");
+    }
+  });
 </script>
 
 <Navbar />

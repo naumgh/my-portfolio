@@ -71,12 +71,19 @@ html {
 		rgba(255, 255, 255, 0) 100%
 	);
 	background-size: 200% 100%;
-	animation: shimmer 2s ease-out forwards;
 	z-index: 1;
 	border-radius: inherit;
 	pointer-events: none;
-	transition: opacity 0.4s ease;
+	opacity: 0;
 }
+
+/* Run shimmer on page load */
+.shimmer-effect.loaded::after {
+	animation: shimmer 2s ease-out forwards;
+	opacity: 1;
+}
+
+/* Run shimmer again on hover */
 .shimmer-effect:hover::after {
 	animation: shimmer 1.2s ease-out forwards;
 	opacity: 1;
