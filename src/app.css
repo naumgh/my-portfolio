@@ -31,16 +31,6 @@ html {
 	animation: fadeInUp 0.6s ease-out both;
 }
 
-/* Hover zoom */
-.profile-animate {
-	transition: transform 0.4s ease;
-}
-
-.profile-animate:hover {
-	transform: scale(1.05);
-}
-
-/* Shimmer animation */
 @keyframes shimmer {
 	0% {
 		background-position: -200% 0;
@@ -76,16 +66,8 @@ html {
 	pointer-events: none;
 	opacity: 0;
 }
-
-/* Run shimmer on page load */
 .shimmer-effect.loaded::after {
 	animation: shimmer 2s ease-out forwards;
-	opacity: 1;
-}
-
-/* Run shimmer again on hover */
-.shimmer-effect:hover::after {
-	animation: shimmer 1.2s ease-out forwards;
 	opacity: 1;
 }
 

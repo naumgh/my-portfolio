@@ -28,8 +28,6 @@ name can now be set from ouside the component, by a parent component
     if (profilePic) {
       profilePic.src = data.avatar_url;
 
-      // trigger shimmer-on-load manually by adding class
-      profilePic.parentElement?.classList.add("loaded");
     }
   });
 </script>
