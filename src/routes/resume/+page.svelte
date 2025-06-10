@@ -28,7 +28,7 @@ fetch("https://api.github.com/users/naumgh")
     <hr class="border-t border-gray-400 mb-6 w-full max-w-2xl mx-auto" />
     <!-- Resume Card -->
      <!-- global card affects everything-->
-    <div class="w-full max-w-2xl mx-auto border border-gray-300 rounded-lg p-4 sm:p-6 bg-surface shadow-md space-y-2">
+    <div class="w-full max-w-2xl mx-auto border border-gray-300 rounded-lg p-4 sm:p-6 bg-surface shadow-md space-y-2 fade-in-up">
         <!-- Circle around Summary -->
     <div class="h-20 flex items-center justify-center w-full">
         <span class="text-xs sm:text-sm font-bold">SUMMARY</span>
