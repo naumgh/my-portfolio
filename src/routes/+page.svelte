@@ -32,7 +32,6 @@ fetch("https://api.github.com/users/naumgh")
 
     <img
     id="github-profile-pic"
-    class="w-36 h-36 rounded-full border-2 border-accent shadow-lg mb-6"
     alt="GitHub Profile Picture"
     />
 
