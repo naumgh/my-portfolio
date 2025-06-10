@@ -115,77 +115,7 @@ values
                 downloadLink="https://github.com/fasttrackd-student-work/java-assignment-schema-design-naumgh"
                 codeType="sql"
             />
-
-        <!-- Project Cards -->
-
-        <ProjectHeader
-            title="SQL Projects"
-            iconSrc="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
-            iconAlt="PostgreSQL Logo"
-            titleColor="#336791"
-        />
-      
-        <!-- Project Cards -->
-        <div class="space-y-6">
-            <ProjectCard
-                id="sql-schema"
-                title="Database Schema Design Showcase"
-                description="Designed a relational database schema to manage campaigns, donations, volunteers, and expenses. Ensured data integrity using primary and foreign keys, while optimizing queries for efficient data retrieval."
-                highlights={[
-                    "Designed and normalized a relational database schema (3NF).",
-                    "Implemented many-to-many relationships with junction tables.",
-                    "Enforced referential integrity with foreign keys.",
-                    "Created complex queries for data aggregation and retrieval.",
-                    "Full file(s) available for download on Github!"
-                ]}   
-                codeSnippet={`--Some table Definition Examples
-
-CREATE TABLE CAMPAIGN(
-  CID bigint PRIMARY KEY,
-  Name varchar(33) NOT NULL,
-  campaignBudget real,
-  mission text,
-  startDate DATE,
-  endDate DATE
-);
-
-CREATE TABLE DONATES(
-  CID bigint,
-  DID bigint,
-  total real,
-  PRIMARY KEY (CID, DID),
-  FOREIGN KEY (CID) REFERENCES CAMPAIGN(CID),
-  FOREIGN KEY (DID) REFERENCES DONATOR(DID)
-);
-
-CREATE TABLE VOLUNTEER (
-  VID bigint PRIMARY KEY,
-  Name varchar(33) NOT NULL,
-  Email varchar(55) NOT NULL,
-  tierLevel int,
-  Salary real
-);
-
--- Sample insertion into some of the tables
-
--- campaign
-INSERT INTO CAMPAIGN VALUES (100,'green-love',  5000, 'to make trees great again', '2024-03-18', '2024-04-18');
-INSERT INTO CAMPAIGN VALUES (101,'generic-protest', 4000, 'we are just protesting to protest', '2024-02-11', '2024-03-02');
-INSERT INTO CAMPAIGN VALUES (102, 'idk',  2000,'idk im having trouble coming up with mission statements', '2024-01-02', '2024-02-02');
-INSERT INTO CAMPAIGN VALUES (103,'final-countdown',500,'this is the final countdown', '2024-01-02', '2024-02-02');
-INSERT INTO CAMPAIGN VALUES (104,'i-just-want-to-slide',2055,'parties in the sky like its 2055', '2055-01-02', '2055-02-02');
--- volunteer
-INSERT INTO VOLUNTEER VALUES (927502, 'Clark Davidson', 'clark@gmail.com', 2, 35);
-INSERT INTO VOLUNTEER VALUES (927503, 'Dave Hoffman', 'dave@gmail.com',1,NULL);
-INSERT INTO VOLUNTEER VALUES (927504, 'Ava Huntington', 'ava@gmail.com', 1,  NULL);
-INSERT INTO VOLUNTEER VALUES (927505, 'Clack Clarkson', 'clack@gmail.com',2, NULL);
-INSERT INTO VOLUNTEER VALUES (927506, 'Black White', 'black@gmail.com',1,NULL );
-INSERT INTO VOLUNTEER VALUES (927507, 'Ivan Naskov', 'ots@gmail.com',2, NULL);
-INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL);`}
-                downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/csc370-Database-Systems/coursework/gng-construct.sql"
-                codeType="sql"
-            />
-            <ProjectCard
+    <ProjectCard
     id="collections-notes"
     title="Java Collections Showcase"
     description="Implemented an Employee management system using Java Collections. Utilized sets and maps in order to contain and reference employee objects as well as subsequent child objects Worker and Manager. Technologies: Eclipse, Java, Github."
@@ -271,6 +201,75 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
     codeType="java"
 />
 
+  <!-- Project Cards -->
+
+        <ProjectHeader
+            title="SQL Projects"
+            iconSrc="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+            iconAlt="PostgreSQL Logo"
+            titleColor="#336791"
+        />
+      
+        <!-- Project Cards -->
+        <div class="space-y-6">
+            <ProjectCard
+                id="sql-schema"
+                title="Database Schema Design Showcase"
+                description="Designed a relational database schema to manage campaigns, donations, volunteers, and expenses. Ensured data integrity using primary and foreign keys, while optimizing queries for efficient data retrieval."
+                highlights={[
+                    "Designed and normalized a relational database schema (3NF).",
+                    "Implemented many-to-many relationships with junction tables.",
+                    "Enforced referential integrity with foreign keys.",
+                    "Created complex queries for data aggregation and retrieval.",
+                    "Full file(s) available for download on Github!"
+                ]}   
+                codeSnippet={`--Some table Definition Examples
+
+CREATE TABLE CAMPAIGN(
+  CID bigint PRIMARY KEY,
+  Name varchar(33) NOT NULL,
+  campaignBudget real,
+  mission text,
+  startDate DATE,
+  endDate DATE
+);
+
+CREATE TABLE DONATES(
+  CID bigint,
+  DID bigint,
+  total real,
+  PRIMARY KEY (CID, DID),
+  FOREIGN KEY (CID) REFERENCES CAMPAIGN(CID),
+  FOREIGN KEY (DID) REFERENCES DONATOR(DID)
+);
+
+CREATE TABLE VOLUNTEER (
+  VID bigint PRIMARY KEY,
+  Name varchar(33) NOT NULL,
+  Email varchar(55) NOT NULL,
+  tierLevel int,
+  Salary real
+);
+
+-- Sample insertion into some of the tables
+
+-- campaign
+INSERT INTO CAMPAIGN VALUES (100,'green-love',  5000, 'to make trees great again', '2024-03-18', '2024-04-18');
+INSERT INTO CAMPAIGN VALUES (101,'generic-protest', 4000, 'we are just protesting to protest', '2024-02-11', '2024-03-02');
+INSERT INTO CAMPAIGN VALUES (102, 'idk',  2000,'idk im having trouble coming up with mission statements', '2024-01-02', '2024-02-02');
+INSERT INTO CAMPAIGN VALUES (103,'final-countdown',500,'this is the final countdown', '2024-01-02', '2024-02-02');
+INSERT INTO CAMPAIGN VALUES (104,'i-just-want-to-slide',2055,'parties in the sky like its 2055', '2055-01-02', '2055-02-02');
+-- volunteer
+INSERT INTO VOLUNTEER VALUES (927502, 'Clark Davidson', 'clark@gmail.com', 2, 35);
+INSERT INTO VOLUNTEER VALUES (927503, 'Dave Hoffman', 'dave@gmail.com',1,NULL);
+INSERT INTO VOLUNTEER VALUES (927504, 'Ava Huntington', 'ava@gmail.com', 1,  NULL);
+INSERT INTO VOLUNTEER VALUES (927505, 'Clack Clarkson', 'clack@gmail.com',2, NULL);
+INSERT INTO VOLUNTEER VALUES (927506, 'Black White', 'black@gmail.com',1,NULL );
+INSERT INTO VOLUNTEER VALUES (927507, 'Ivan Naskov', 'ots@gmail.com',2, NULL);
+INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL);`}
+                downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/csc370-Database-Systems/coursework/gng-construct.sql"
+                codeType="sql"
+            />
 
             <ProjectHeader
                 title="Python Projects"
