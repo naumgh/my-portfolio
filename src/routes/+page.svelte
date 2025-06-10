@@ -17,7 +17,7 @@ name can now be set from ouside the component, by a parent component
     export let name = "Naum Hoffman";
     export let jobTitle = "Software Engineer / Data Analyst";
     //tys sumamry
-    export let summary = "Passionate developer with a knack for building clean, efficient web experiences. Skilled in full-stack development, data analysis, and turning ideas into reality. Always learning, always building."
+    export let summary = "I'm Naum Hoffman, a recent computer science graduate from the University of Victoria, currently based in Seattle, WA. My journey into tech started with creative building in games like Minecraft and evolved into real-world problem solving through Python and Java. I’ve worked as a data analyst at Pamway Logistics, where I aligned academic insights with business outcomes, and gained international experience in Macedonia that pushed me out of my comfort zone and helped me grow professionally. Outside of work, I stay grounded through fitness, camping in the Cascades and Olympic Peninsula, and volunteer work with the SCA restoring native ecosystems. I'm always learning, building, and looking for ways to make a meaningful impact."
     import Navbar from "$lib/components/Navbar.svelte";
 
 fetch("https://api.github.com/users/naumgh")

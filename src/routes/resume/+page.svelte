@@ -1,6 +1,19 @@
 <script lang="ts">
     //@ts-ignore
     import Navbar from "../../lib/components/Navbar.svelte";
+
+
+fetch("https://api.github.com/users/naumgh")
+  .then((res) => res.json())
+  .then((data) => {
+    const resumeBio = document.getElementById("github-resume-bio");
+    if (resumeBio) {
+      resumeBio.textContent =
+        data.bio ||
+        "Hey, I'm Naum Hoffman. I am passionate about software engineering and data science, and I aspire to build a successful career in these fields.";
+    }
+  });
+    
 </script>
 
 <Navbar />
@@ -17,26 +30,24 @@
      <!-- global card affects everything-->
     <div class="w-full max-w-2xl mx-auto border border-gray-300 rounded-lg p-4 sm:p-6 bg-surface shadow-md space-y-2">
         <!-- Circle around Summary -->
-        <div class="h-20 flex items-center justify-center w-full">
-            <span class="text-xs sm:text-sm font-bold">SUMMARY</span>
-        </div>
-        <div class="flex flex-col w-full space-y-2 mb-6">
-            <p class="text-xs sm:text-sm text-secondary">
-                Hey, I'm <span class="font-bold text-primary">Naum Hoffman</span>. 
-                I am passionate about <span class="text-accent font-semibold">software engineering </span> 
-                and <span class="text-accent font-semibold">data science</span>, and I aspire to build a successful career in these fields.
-            </p>
-            <p class="text-xs sm:text-sm text-secondary">
-                Want to see my full resume? 
-                <a
-                    href="/Naum_Hoffman_Resume.pdf"
-                    download="Naum_Hoffman_Resume.pdf"
-                    class="text-accent underline hover:text-primary transition"
-                >
-                    Download it here.
-                </a>
-            </p>
-        </div>
+    <div class="h-20 flex items-center justify-center w-full">
+        <span class="text-xs sm:text-sm font-bold">SUMMARY</span>
+    </div>
+    <div class="flex flex-col w-full space-y-2 mb-6">
+        <p id="github-resume-bio" class="text-xs sm:text-sm text-secondary">
+            Loading bio...
+        </p>
+        <p class="text-xs sm:text-sm text-secondary">
+            Want to see my full resume? 
+            <a
+                href="/Naum_Hoffman_Resume.pdf"
+                download="Naum_Hoffman_Resume.pdf"
+                class="text-accent underline hover:text-primary transition"
+            >
+                Download it here.
+            </a>
+        </p>
+    </div>
 
         <!-- Circle around Education -->
         <div class="h-20 flex items-center justify-center w-full">
