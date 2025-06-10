@@ -41,7 +41,7 @@ name can now be set from ouside the component, by a parent component
 
 <img
   id="github-profile-pic"
-  class="w-[270px] h-[270px] rounded-full border-4 border-accent shadow-lg mb-6 object-cover"
+  class="w-[270px] h-[270px] rounded-full border-4 border-accent shadow-lg mb-6 object-cover profile-animate"
   alt="GitHub Profile Picture"
 />
 

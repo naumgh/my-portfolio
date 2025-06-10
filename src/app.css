@@ -32,6 +32,14 @@ html {
 	animation-delay: 0.3s;
 }
 
+.profile-animate {
+	transition: transform 0.4s ease;
+}
+
+.profile-animate:hover {
+	transform: scale(1.05);
+}
+
 /*
 might be needed on other browsers
 
