@@ -30,9 +30,9 @@ fetch("https://api.github.com/users/naumgh")
 
 <main class="flex flex-col items-center justify-center min-h-screen bg-background text-primary font-sans text-center">
 
-    <img
+<img
   id="github-profile-pic"
-  class="w-36 h-36 rounded-full border-4 border-accent shadow-lg mb-6 object-cover"
+  class="w-[270px] h-[270px] rounded-full border-4 border-accent shadow-lg mb-6 object-cover"
   alt="GitHub Profile Picture"
 />
 
