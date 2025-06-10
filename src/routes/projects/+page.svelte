@@ -20,6 +20,9 @@
         <nav class="mb-6 px-4 sm:px-8 md:px-12 lg:px-6 py-4 rounded-md shadow-md text-white">
             <h2 class="text-sm sm:text-base font-semibold mb-2">Table of Contents</h2>
             <div class="pl-2 text-accent font-mono p-2 rounded-md text-xs sm:text-sm">
+                <p>FastTrack’D Projects</p>
+                
+
                 <p>SQL Projects/</p>
                 <p class="pl-4">│── <a href="#sql-schema" class="text-blue-500 hover:underline">Database Schema Design</a></p>
                 
@@ -46,6 +49,71 @@
                 <p class="pl-4">│── <a href="#bitmap-display" class="text-blue-500 hover:underline">Bitmap Display Renderer</a></p>
             </div>
         </nav>
+
+
+        <ProjectHeader
+            title="FastTrack’D Projects"
+            iconSrc="https://www.vectorlogo.zone/logos/fasttrackd/fasttrackd-icon.svg"
+            iconAlt="FastTrack'D Logo"
+            titleColor="#ff6f61"
+        />
+
+        <div class="space-y-6">
+            <ProjectCard
+                id="schema-notes"
+                title="Schema Design"
+                description="Designed a relational schema in PostgreSQL for managing people, locations, and interests."
+                highlights={[
+                    "Implemented a schema in PostgreSQL using PGAdmin for people, locations, and interests.",
+                    "Utilized SELECT, UPDATE, INSERT, DELETE, WHERE, JOIN, GROUP BY, and ORDER BY statements.",
+                    "Technologies: SQL, PostgreSQL, PGAdmin."
+                ]}   
+                codeSnippet={`-- Example: Table creation for people and locations
+create table location(
+	id serial primary key,
+	city varchar(255) NOT NULL,
+	--not every country uses states, but provinces, oblasks, etc are all functioanlyl equivalent
+	state varchar(255) NOT NULL,
+	country varchar(255) NOT NULL
+);
+
+--person table, 1 to many with location
+create table person(
+	id serial primary key,
+	firstName varchar(50) NOT NULL,
+	lastName varchar(50) NOT NULL,
+	age smallint,
+	location_id INTEGER REFERENCES location(id)
+	
+);
+
+--person_interest table, many to one with person
+--really, this is just a many-to-many iwth interest
+
+create table interest(
+	id serial primary key,
+	title varchar(255) NOT NULL
+);
+
+create table person_interest(
+	person_id INTEGER NOT NULL REFERENCES person(id),
+	interest_id INTEGER NOT NULL REFERENCES interest(id),
+	primary key (person_id, interest_id)
+);
+
+--HERE WE CAN BEGIN INSERTIONS
+--insert location first
+insert into location (city, state, country) 
+values
+	('Nashville', 'Tennessee', 'United States'),
+	('Memphis', 'Tennessee', 'United States'),
+	('Phoenix', 'Arizona', 'United States'),
+	('Denver', 'Colorado', 'United States');`}
+                downloadLink="https://github.com/fasttrackd-student-work/java-assignment-schema-design-naumgh"
+                codeType="sql"
+            />
+
+        <!-- Project Cards -->
 
         <ProjectHeader
             title="SQL Projects"
@@ -114,6 +182,93 @@ INSERT INTO VOLUNTEER VALUES (927508, 'Debil Naskov', 'Debil@gmail.com',1, NULL)
                 downloadLink="https://github.com/naumgh/projectsAndSchool/blob/main/csc370-Database-Systems/coursework/gng-construct.sql"
                 codeType="sql"
             />
+            <ProjectCard
+    id="collections-notes"
+    title="Java Collections Showcase"
+    description="Implemented an Employee management system using Java Collections. Utilized sets and maps in order to contain and reference employee objects as well as subsequent child objects Worker and Manager. Technologies: Eclipse, Java, Github."
+    highlights={[
+        "Implemented an Employee management system using Java Collections.",
+        "Utilized sets and maps to manage Employee, Worker, and Manager objects.",
+        "Designed methods to retrieve the full organizational hierarchy.",
+        "Technologies: Eclipse, Java, Github.",
+        "Full file available for download on Github!"
+    ]}
+    codeSnippet={`public Map<Manager, Set<Employee>> getFullHierarchy() {
+    Map<Manager, Set<Employee>> res = new HashMap<>();
+    for (Employee e : all_unique_employees) {
+        if (e instanceof Manager) {
+            Manager m = (Manager) e;
+            Set<Employee> subordinates;
+            if (worker_list.containsKey(m)) {
+                subordinates = new HashSet<>(worker_list.get(m));
+            } else {
+                subordinates = new HashSet<>();
+            }
+            res.put(m, subordinates);
+        }
+    }
+    return res;
+}`}
+    downloadLink="https://github.com/fasttrackd-student-work/java-assignment-collections-naumgh/blob/master/src/main/java/com/cooksys/ftd/assignments/collections/model/OrgChart.java"
+    codeType="java"
+/>
+
+<ProjectCard
+    id="fullstack-social-media-api"
+    title="Full Stack Social Media REST API (Team Project)"
+    description="Developed a production-grade RESTful social media API as part of a team, enabling user registration, tweet posting, likes, follows, and mentions using Spring Boot, JPA, and PostgreSQL. Implemented robust entity modeling, soft-deletion logic, and comprehensive many-to-many user relationships. Built secure, validated endpoints and applied clean architecture for maintainability and scalability."
+    highlights={[
+        "Collaborated in a team to build a RESTful social media API with user registration, tweet posting, likes, follows, and mentions.",
+        "Implemented entity modeling with embedded credentials/profile and soft-deletion logic.",
+        "Supported full many-to-many user relationships: followers/following, likes, and mentions.",
+        "Built comprehensive validation, DTO mapping, and secure credential-based endpoints.",
+        "Designed and tested endpoints with Postman, including edge case validation and global error handling.",
+        "Applied clean architecture with service/repository layers, custom exceptions, and global error handling.",
+        "Technologies: Java, Spring Boot, PostgreSQL, PGAdmin, JPA, Lombok, Maven, Postman, Eclipse, Github.",
+        "Full project available on Github!"
+    ]}
+    codeSnippet={`public class TweetController {
+
+    private final TweetService tweetService;
+    
+    @GetMapping
+    public List<TweetResponseDto> getAllTweets() {
+        return tweetService.getAllTweets();
+    }
+    
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public TweetResponseDto createTweet(@RequestBody TweetRequestDto tweetRequestDto) {
+        return tweetService.createTweet(tweetRequestDto);
+    }
+    
+    @GetMapping("/{id}")
+    public TweetResponseDto getTweetById(@PathVariable Long id) {
+        return tweetService.getTweetById(id);
+    }
+    
+    @DeleteMapping("/{id}")
+    public TweetResponseDto deleteTweet(@PathVariable Long id) {
+        return tweetService.deleteTweet(id);
+    }
+    
+    @GetMapping("/{id}/tags")
+    public List<HashtagDto> getTagsByTweetId(@PathVariable Long id) {
+        return tweetService.getTagsByTweetId(id);
+    }
+    
+    @PostMapping("/{id}/like")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void likeTweet(@PathVariable Long id, @RequestBody CredentialsDto credentials) {
+        tweetService.likeTweet(id, credentials);
+    }
+}
+`}
+    downloadLink="https://github.com/fasttrackd-student-work/spring-assessment-social-media-may-2025-team-2"
+    codeType="java"
+/>
+
+
             <ProjectHeader
                 title="Python Projects"
                 iconSrc="https://www.vectorlogo.zone/logos/python/python-icon.svg"
