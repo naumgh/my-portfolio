@@ -31,7 +31,7 @@ html {
 	animation: fadeInUp 0.6s ease-out both;
 }
 
-/* Hover Zoom */
+/* Hover zoom */
 .profile-animate {
 	transition: transform 0.4s ease;
 }
@@ -40,7 +40,7 @@ html {
 	transform: scale(1.05);
 }
 
-/* Shimmer (only plays once and disappears) */
+/* Shimmer animation */
 @keyframes shimmer {
 	0% {
 		background-position: -200% 0;
@@ -75,6 +75,11 @@ html {
 	z-index: 1;
 	border-radius: inherit;
 	pointer-events: none;
+	transition: opacity 0.4s ease;
+}
+.shimmer-effect:hover::after {
+	animation: shimmer 1.2s ease-out forwards;
+	opacity: 1;
 }
 
 /*
