@@ -15,7 +15,8 @@ name can now be set from ouside the component, by a parent component
 
 <script>
     export let name = "Naum Hoffman";
-    export let jobTitle = "Software Engineer / Data Analyst";
+    //export let jobTitle = "Software Engineer / Data Analyst";
+    let jobTitle = "";
     //tys sumamry
     export let summary = "I'm Naum Hoffman, a recent computer science graduate from the University of Victoria, currently based in Seattle, WA. My journey into tech started with creative building in games like Minecraft and evolved into real-world problem solving through Python and Java. I’ve worked as a data analyst at Pamway Logistics, where I aligned academic insights with business outcomes, and gained international experience in Macedonia that pushed me out of my comfort zone and helped me grow professionally. Outside of work, I stay grounded through fitness, camping in the Cascades and Olympic Peninsula, and volunteer work with the SCA restoring native ecosystems. I'm always learning, building, and looking for ways to make a meaningful impact."
     import Navbar from "$lib/components/Navbar.svelte";
@@ -23,9 +24,13 @@ name can now be set from ouside the component, by a parent component
 fetch("https://api.github.com/users/naumgh")
   .then((res) => res.json())
   .then((data) => {
-    document.getElementById("github-profile-pic").src = data.avatar_url;
-    //document.getElementById("bio").textContent = data.bio;
-});
+    const resumeBio = document.getElementById("github-resume-bio");
+    if (resumeBio) {
+      resumeBio.textContent =
+        data.bio ||
+        "Hey, I'm Naum Hoffman. I am passionate about software engineering and data science, and I aspire to build a successful career in these fields.";
+    }
+  });
 </script>
 
 <Navbar />
