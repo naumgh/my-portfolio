@@ -40,6 +40,9 @@ fetch("https://api.github.com/users/naumgh")
 
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">{name}</h1>
     <p class="text-lg sm:text-xl text-secondary mb-6">{jobTitle}</p>
+    <p class="text-sm sm:text-base text-secondary mb-8 max-w-2xl px-4">
+        {summary}
+    </p>
 
     <a href="/projects" 
        class="px-8 py-3 bg-accent hover:bg-green-500 rounded-lg text-surface font-semibold transition duration-300">
