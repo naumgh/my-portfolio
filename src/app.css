@@ -16,14 +16,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-#github-profile-pic {
-	width: 350px;
-	height: 350px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 4px solid var(--border);
-	box-shadow: 0 4px 12px var(--shadow);
-}
 /*
 might be needed on other browsers
 
