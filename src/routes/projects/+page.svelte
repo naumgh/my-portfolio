@@ -56,7 +56,7 @@
 
         <ProjectHeader
             title="FastTrack’D Projects"
-            iconSrc="https://cooksys.com/wp-content/uploads/2024/05/Cook-Systems-IT-Staffing-Solutions-Logo.svg"
+            iconSrc="https://cooksys.com/wp-content/uploads/2024/05/Cook-Systems-IT-Staffing-Solutions-Logo-Mark.svg"
             iconAlt="FastTrack'D Logo"
             titleColor="#ff6f61"
         />
