@@ -11,6 +11,7 @@
         <a href="/resume" class="text-sm hover:text-accent transition duration-300">Resume</a>
         <a href="/contact" class="text-sm hover:text-accent transition duration-300">Contact</a>
 
+
         <!-- GitHub Icon Link -->
         <a href="https://github.com/naumgh/projectsAndSchool" aria-label="GitHub Repo"
            class="hover:text-accent transition duration-300 flex items-center"

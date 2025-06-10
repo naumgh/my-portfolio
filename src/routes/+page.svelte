@@ -16,6 +16,8 @@ name can now be set from ouside the component, by a parent component
 <script>
     export let name = "Naum Hoffman";
     export let jobTitle = "Software Engineer / Data Analyst";
+    //tys sumamry
+    export let summary = "Passionate developer with a knack for building clean, efficient web experiences. Skilled in full-stack development, data analysis, and turning ideas into reality. Always learning, always building."
     import Navbar from "$lib/components/Navbar.svelte";
 
 fetch("https://api.github.com/users/naumgh")
