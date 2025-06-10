@@ -39,11 +39,13 @@ name can now be set from ouside the component, by a parent component
 
 <main class="flex flex-col items-center justify-center min-h-screen bg-background text-primary font-sans text-center">
 
-<img
-  id="github-profile-pic"
-  class="w-[270px] h-[270px] rounded-full border-4 border-accent shadow-lg mb-6 object-cover profile-animate"
-  alt="GitHub Profile Picture"
-/>
+<div class="shimmer-effect rounded-full w-[270px] h-[270px] mb-6">
+  <img
+    id="github-profile-pic"
+    class="w-full h-full rounded-full border-4 border-accent shadow-lg object-cover"
+    alt="GitHub Profile Picture"
+  />
+</div>
 
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">{name}</h1>
     <p class="text-lg sm:text-xl text-secondary mb-6">{jobTitle}</p>
