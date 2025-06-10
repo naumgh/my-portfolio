@@ -21,6 +21,9 @@
             <h2 class="text-sm sm:text-base font-semibold mb-2">Table of Contents</h2>
             <div class="pl-2 text-accent font-mono p-2 rounded-md text-xs sm:text-sm">
                 <p>FastTrack’D Projects</p>
+                <p class="pl-4">│── <a href="#schema-notes" class="text-blue-500 hover:underline">Schema Design</a></p>
+                <p class="pl-4">│── <a href="#collections-notes" class="text-blue-500 hover:underline">Java Collections Showcase</a></p>
+                <p class="pl-4">│── <a href="#fullstack-social-media-api" class="text-blue-500 hover:underline">Full Stack Social Media REST API</a></p>
                 
 
                 <p>SQL Projects/</p>
