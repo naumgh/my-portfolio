@@ -42,9 +42,9 @@ name can now be set from ouside the component, by a parent component
 <div class="shimmer-effect rounded-full w-[270px] h-[270px] mb-6">
   <img
     id="github-profile-pic"
-    class="w-[270px] h-[270px] rounded-full border-4 border-accent shadow-lg mb-6 object-cover profile-animate fade-in-up"
+    class="w-full h-full rounded-full border-4 border-accent shadow-lg object-cover profile-animate fade-in-up"
     alt="GitHub Profile Picture"
-    />
+  />
 </div>
 
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">{name}</h1>

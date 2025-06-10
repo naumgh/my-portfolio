@@ -59,7 +59,7 @@ html {
 		rgba(255, 255, 255, 0) 100%
 	);
 	background-size: 200% 100%;
-	animation: shimmer 2s infinite;
+	animation: shimmer 2s;
 	z-index: 1;
 	border-radius: inherit;
 	pointer-events: none;
