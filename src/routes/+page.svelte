@@ -29,6 +29,7 @@ name can now be set from ouside the component, by a parent component
       profilePic.src = data.avatar_url;
 
     }
+    jobTitle = data.bio;
   });
 </script>
 
