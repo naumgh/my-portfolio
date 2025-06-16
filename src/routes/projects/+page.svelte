@@ -144,7 +144,7 @@ values
     return res;
 }`}
     downloadLink="https://github.com/fasttrackd-student-work/java-assignment-collections-naumgh/blob/master/src/main/java/com/cooksys/ftd/assignments/collections/model/OrgChart.java"
-    codeType="java"
+    codeType="language-java"
 />
 
 <ProjectCard
@@ -201,7 +201,7 @@ values
 }
 `}
     downloadLink="https://github.com/fasttrackd-student-work/spring-assessment-social-media-may-2025-team-2"
-    codeType="java"
+    codeType="language-java"
 />
 
   <!-- Project Cards -->
