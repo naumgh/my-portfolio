@@ -15,8 +15,7 @@ name can now be set from ouside the component, by a parent component
 
 <script>
   export let name = "Naum Hoffman";
-  export let summary = "I'm Naum Hoffman, a recent computer science graduate from the University of Victoria, currently based in Seattle, WA. My journey into tech started with hosting servers in videogames, and evolved into real-world problem solving through Python and Java. I’ve worked as a data analyst at Pamway Logistics, where I aligned academic insights with business outcomes, and gained international experience in Macedonia that pushed me out of my comfort zone and helped me grow professionally. Outside of work, I stay grounded through fitness, camping in the Cascades and Olympic Peninsula, and volunteer work with the SCA restoring native ecosystems. I'm always learning, building, and looking for ways to make a meaningful impact.";
-
+  export let summary = "Hi, I’m Naum Hoffman, a Computer Science grad from the University of Victoria, now based in Seattle. My journey into tech started with hosting servers in video games and grew into a passion for solving real-world problems with Python and Java. I’ve worked as a data analyst at Pamway Logistics, aligning technical insights with business goals, and gained international experience in Macedonia that pushed me out of my comfort zone and helped me grow. Outside of tech, I’m into fitness, backcountry camping in the Cascades and Olympic Peninsula, and volunteering with the SCA to restore native ecosystems. I'm always building, learning, and looking for ways to create meaningful impact.";
   import Navbar from "$lib/components/Navbar.svelte";
 
   let jobTitle = ""; // this will be set via fetch
