@@ -211,7 +211,6 @@ values
         />
       
         <!-- Project Cards -->
-        <div class="space-y-6">
             <ProjectCard
                 id="sql-schema"
                 title="Database Schema Design Showcase"
