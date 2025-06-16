@@ -124,8 +124,7 @@ values
         "Utilized sets and maps to manage Employee, Worker, and Manager objects.",
         "Designed methods to retrieve the full organizational hierarchy.",
         "Technologies: Eclipse, Java, Github.",
-        "Full file available for download on Github!"
-    ]}
+        "Full file available for download on Github!"]}
     codeSnippet={`
     public Map<Manager, Set<Employee>> getFullHierarchy() {
     Map<Manager, Set<Employee>> res = new HashMap<>();
@@ -144,7 +143,7 @@ values
     return res;
 }`}
     downloadLink="https://github.com/fasttrackd-student-work/java-assignment-collections-naumgh/blob/master/src/main/java/com/cooksys/ftd/assignments/collections/model/OrgChart.java"
-    codeType="javascript"
+    codeType="java"
 />
 
 <ProjectCard
@@ -201,7 +200,7 @@ values
 }
 `}
     downloadLink="https://github.com/fasttrackd-student-work/spring-assessment-social-media-may-2025-team-2"
-    codeType="language-java"
+    codeType="java"
 />
 
   <!-- Project Cards -->
