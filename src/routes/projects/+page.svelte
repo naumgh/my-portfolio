@@ -125,7 +125,7 @@ values
         "Designed methods to retrieve the full organizational hierarchy.",
         "Technologies: Eclipse, Java, Github.",
         "Full file available for download on Github!"]}
-    codeSnippet={`
+    codeSnippet={` --Example management system using Java Collections
     public Map<Manager, Set<Employee>> getFullHierarchy() {
     Map<Manager, Set<Employee>> res = new HashMap<>();
     for (Employee e : all_unique_employees) {
@@ -160,8 +160,7 @@ values
         "Technologies: Java, Spring Boot, PostgreSQL, PGAdmin, JPA, Lombok, Maven, Postman, Eclipse, Github.",
         "Full project available on Github!"
     ]}
-    codeSnippet={`
-    
+    codeSnippet={`-- Example of a TweetController in Spring Boot
     public class TweetController {
 
     private final TweetService tweetService;
