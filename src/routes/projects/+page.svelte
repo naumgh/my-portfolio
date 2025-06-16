@@ -126,7 +126,8 @@ values
         "Technologies: Eclipse, Java, Github.",
         "Full file available for download on Github!"
     ]}
-    codeSnippet={`public Map<Manager, Set<Employee>> getFullHierarchy() {
+    codeSnippet={`
+    public Map<Manager, Set<Employee>> getFullHierarchy() {
     Map<Manager, Set<Employee>> res = new HashMap<>();
     for (Employee e : all_unique_employees) {
         if (e instanceof Manager) {
@@ -160,7 +161,9 @@ values
         "Technologies: Java, Spring Boot, PostgreSQL, PGAdmin, JPA, Lombok, Maven, Postman, Eclipse, Github.",
         "Full project available on Github!"
     ]}
-    codeSnippet={`public class TweetController {
+    codeSnippet={`
+    
+    public class TweetController {
 
     private final TweetService tweetService;
     
