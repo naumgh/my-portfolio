@@ -144,7 +144,7 @@ values
     return res;
 }`}
     downloadLink="https://github.com/fasttrackd-student-work/java-assignment-collections-naumgh/blob/master/src/main/java/com/cooksys/ftd/assignments/collections/model/OrgChart.java"
-    codeType="language-java"
+    codeType="javascript"
 />
 
 <ProjectCard
